@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import productPage.ProductView;
 import userDatabase.UserArray;
 
 /**
@@ -60,8 +61,10 @@ public class MainController {
             lblStatus.setText("Login Successful");
             
             Stage primaryStage = new Stage();
-            MainView main = new MainView();
-            main.start(primaryStage);
+            ProductView products = new ProductView();
+            //MainView main = new MainView();
+            //main.start(primaryStage);
+            products.start(primaryStage);
             
         }
         else if (txtUserName.getText().isEmpty() || txtPassword.getText().isEmpty()) 
@@ -122,11 +125,5 @@ public class MainController {
     private UserArray temp = new UserArray();
     private boolean check = false;
     private boolean checkUser = false;
-    private Stage primaryStageLogin = new Stage();
-    private Stage primaryStageRegister = new Stage();
-    private Stage primaryStageMain = new Stage();
-    private Stage primaryStageWelcome = new Stage();
-    
-    public RegisterView register = new RegisterView();
     
 }
