@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class ConfirmBox {
 
-//this is my comment
+//this is my comment.... how about this comment
     static boolean answer;
 
     public static boolean display(String title, String message){
