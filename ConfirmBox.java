@@ -1,5 +1,4 @@
 package loginRegister;
-
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -8,14 +7,9 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-/**
- * testing github
- * @author larskoester
- * 
- */
 public class ConfirmBox {
 
-
+//this is my comment
     static boolean answer;
 
     public static boolean display(String title, String message){
