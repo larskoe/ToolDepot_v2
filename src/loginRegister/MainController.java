@@ -1,8 +1,13 @@
+
+    
 package loginRegister;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -15,7 +20,7 @@ import userDatabase.UserArray;
  * @author larskoester
  * class that is the main controller for the Login/Registration process.
  */
-public class MainController {
+public class MainController  {
     @FXML
     private Label lblStatus;
     
@@ -125,5 +130,9 @@ public class MainController {
     private UserArray temp = new UserArray();
     private boolean check = false;
     private boolean checkUser = false;
+
+
+
     
 }
+

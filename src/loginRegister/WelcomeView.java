@@ -18,7 +18,7 @@ public class WelcomeView extends Application {
     public void start(Stage primaryStage) {
         try {
                   
-        Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/loginRegister/Welcome.fxml"));
         Scene scene = new Scene(root);
         
         primaryStage.setTitle("Welcome to ToolDepot");

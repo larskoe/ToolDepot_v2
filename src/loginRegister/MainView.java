@@ -16,7 +16,7 @@ public class MainView extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
     	try {
-    		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+    		Parent root = FXMLLoader.load(getClass().getResource("/loginRegister/Main.fxml"));
             Scene scene = new Scene(root);
         
             primaryStage.setTitle("ToolDepot"); 
