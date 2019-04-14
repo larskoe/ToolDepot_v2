@@ -25,7 +25,7 @@
       </HBox>
       <Label layoutX="146.0" layoutY="84.0" text="Username" />
       <Label layoutX="148.0" layoutY="137.0" text="Password" />
-      <Label layoutX="201.0" layoutY="272.0" text="Don't have a login yet? Register!" />
+      <Label layoutX="185.0" layoutY="272.0" text="Don't have a login yet? Register Now!" />
       <Button layoutX="266.0" layoutY="301.0" mnemonicParsing="false" onAction="#WelcomeRegister" text="Register" />
    </children>
 </AnchorPane>

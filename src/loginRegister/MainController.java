@@ -67,9 +67,9 @@ public class MainController  {
             
             Stage primaryStage = new Stage();
             ProductView products = new ProductView();
+            products.start(primaryStage);
             //MainView main = new MainView();
             //main.start(primaryStage);
-            products.start(primaryStage);
             
         }
         else if (txtUserName.getText().isEmpty() || txtPassword.getText().isEmpty()) 
@@ -121,8 +121,10 @@ public class MainController  {
     			lblStatus.setText("Registered succesfully");
     			
                 Stage primaryStage = new Stage();
-                MainView main = new MainView();
-                main.start(primaryStage);
+                ProductView products = new ProductView();
+                products.start(primaryStage);
+                //MainView main = new MainView();
+                //main.start(primaryStage);
     		}
     	}    	
     }
