@@ -17,6 +17,7 @@ import loginRegister.LoginView;
  * Main Controller for the Product page
  */
 public class MainController {
+	@FXML
 
 	/**
 	 * Logout function with an alert box to confirm logout
@@ -44,6 +45,10 @@ public class MainController {
 		} else {
 		    //do nothing
 		}
+	}
+	
+	void search (ActionEvent event) throws Exception { 
+		
 	}
 
 }
