@@ -2,7 +2,7 @@ package itemDatabase;
 
 public class Items {
 	
-	private String itemName;
-	private String test;
+	//private String itemName;
+	//private String test;
 
 }
