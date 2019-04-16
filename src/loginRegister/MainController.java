@@ -118,8 +118,6 @@ public class MainController  {
                 Stage primaryStage = new Stage();
                 ProductView products = new ProductView();
                 products.start(primaryStage);
-                //MainView main = new MainView();
-                //main.start(primaryStage);
     		}
     	}    	
     }

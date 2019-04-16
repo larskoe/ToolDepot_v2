@@ -16,22 +16,22 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="productPage.MainController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="productPage.MainController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="635.0" prefWidth="581.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0">
          <children>
-            <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <BorderPane prefHeight="1003.0" prefWidth="600.0">
                <top>
                   <MenuBar BorderPane.alignment="CENTER">
                     <menus>
                       <Menu mnemonicParsing="false" text="Search">
                         <items>
-                          <MenuItem mnemonicParsing="false" text="Search for Tools" />
+                          <MenuItem mnemonicParsing="false" onAction="#search" text="Search for Tools" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Profile">
                         <items>
-                          <MenuItem mnemonicParsing="false" text="Profile" />
+                          <MenuItem mnemonicParsing="false" onAction="#InitilizeScreen" text="Profile" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Help">
@@ -55,14 +55,10 @@
                      <children>
                         <Pane prefHeight="250.0" prefWidth="250.0">
                            <children>
-                              <ImageView fitHeight="104.0" fitWidth="187.0" layoutX="44.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../resources/wrench-01.jpg" />
-                                 </image>
-                              </ImageView>
-                              <Label layoutX="98.0" layoutY="117.0" text="Wrench" />
-                              <Label layoutX="99.0" layoutY="141.0" text="\$25.99" />
-                              <Button layoutX="98.0" layoutY="166.0" mnemonicParsing="false" text="Rent" />
+                              <ImageView fx:id="Image1" fitHeight="104.0" fitWidth="187.0" layoutX="44.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="Name1" layoutX="98.0" layoutY="117.0" text="Wrench" />
+                              <Label fx:id="Price1" layoutX="99.0" layoutY="141.0" text="\$25.99" />
+                              <Button fx:id="Rent1" layoutX="98.0" layoutY="166.0" mnemonicParsing="false" text="Rent" />
                            </children>
                         </Pane>
                         <Pane prefHeight="250.0" prefWidth="250.0">
@@ -72,9 +68,9 @@
                                     <Image url="@../resources/wrench-01.jpg" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="101.0" layoutY="117.0" text="Wrench" />
-                              <Label layoutX="103.0" layoutY="145.0" text="\$25.99" />
-                              <Button layoutX="102.0" layoutY="177.0" mnemonicParsing="false" text="Rent" />
+                              <Label fx:id="Name2" layoutX="101.0" layoutY="117.0" text="Wrench" />
+                              <Label fx:id="Price2" layoutX="103.0" layoutY="145.0" text="\$25.99" />
+                              <Button fx:id="Rent2" layoutX="102.0" layoutY="177.0" mnemonicParsing="false" text="Rent" />
                            </children>
                         </Pane>
                         <Pane prefHeight="250.0" prefWidth="250.0">
@@ -84,9 +80,9 @@
                                     <Image url="@../resources/wrench-01.jpg" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="101.0" layoutY="117.0" text="Wrench" />
-                              <Label layoutX="101.0" layoutY="141.0" text="\$25.99" />
-                              <Button layoutX="101.0" layoutY="170.0" mnemonicParsing="false" text="Rent" />
+                              <Label fx:id="Name3" layoutX="101.0" layoutY="117.0" text="Wrench" />
+                              <Label fx:id="Price3" layoutX="101.0" layoutY="141.0" text="\$25.99" />
+                              <Button fx:id="Rent3" layoutX="101.0" layoutY="170.0" mnemonicParsing="false" text="Rent" />
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0">
@@ -96,9 +92,9 @@
                                     <Image url="@../resources/wrench-01.jpg" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="101.0" layoutY="117.0" text="Wrench" />
-                              <Label layoutX="101.0" layoutY="141.0" text="\$25.99" />
-                              <Button layoutX="102.0" layoutY="170.0" mnemonicParsing="false" text="Rent" />
+                              <Label fx:id="Name4" layoutX="101.0" layoutY="117.0" text="Wrench" />
+                              <Label fx:id="Price4" layoutX="101.0" layoutY="141.0" text="\$25.99" />
+                              <Button fx:id="Rent4" layoutX="102.0" layoutY="170.0" mnemonicParsing="false" text="Rent" />
                            </children>
                         </Pane>
                      </children>
