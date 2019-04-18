@@ -14,7 +14,7 @@ public class ProductView extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("Product.fxml"));
             Scene scene = new Scene(root);
             
-            //scene.getStylesheets().add(getClass().getResource("Login.css").toExternalForm());
+            //scene.getStylesheets().add(getClass().getResource("product.css").toExternalForm());
         
             primaryStage.setTitle("Products-ToolDepot"); 
             primaryStage.setScene(scene);

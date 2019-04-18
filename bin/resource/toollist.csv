@@ -1,10 +1,10 @@
-﻿101,tyler,basic tool,Hammer,excellent,$19.99,src/resource/img/101.png
-102,lars,power tool,Drill,good,$15.99,src/resource/img/102.png
-103,tyler,ladder,10 Foot Ladder,fair,$9.99,src/resource/img/103.png
-104,lars,saw,Table Saw,good,$39.99 ,src/resource/img/104.png
-105,tyler,wood working,chisel,fair,$5.50,src/resource/img/105.png
-106,lars,cement,cement mixer,good,$10.00,src/resource/img/106.png
-107,tyler,painting,large paint roller,fair,$2.99,src/resource/img/107.png
-108,lars,motorized,lawnmower,good,$50.99,src/resource/img/108.png
-109,tyler,basic tool,mallet,poor,$3.79,src/resource/img/109.png
-110,lars,power tool,sander,good,$18.99,src/resource/img/110.png
+﻿101,tyler,basic tool,Hammer,excellent,19.99,src/resource/img/101.png
+102,lars,power tool,Drill,good,15.99,src/resource/img/102.png
+103,tyler,ladder,10 Foot Ladder,fair,9.99,src/resource/img/103.png
+104,lars,saw,Table Saw,good,39.99 ,src/resource/img/104.png
+105,tyler,ood working,Chisel,fair,5.50,src/resource/img/105.png
+106,lars,cement,Cement Mixer,good,10.00,src/resource/img/106.png
+107,tyler,painting,Large Paint Poller,fair,2.99,src/resource/img/107.png
+108,lars,motorized,Lawnmower,good,50.99,src/resource/img/108.png
+109,tyler,basic tool,Mallet,poor,3.79,src/resource/img/109.png
+110,lars,power tool,Sander,good,18.99,src/resource/img/110.png
