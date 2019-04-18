@@ -16,6 +16,7 @@ import itemDatabase.items;
 
 /**
  * @author tylersmith2356
+ * @author larskoester
  * class that implements the item array for searching, adding, removing, etc. 
  */
 
@@ -59,21 +60,54 @@ public class itemArray {
         }
 	    }
 	
+	public void initilizeArrayRent () throws IOException {
+        try (Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH_RENT));
+             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT))
+        {
+        	rentList.clear();
+			for (CSVRecord csvRecord : csvParser) {
+			          
+				// Accessing values by the names assigned to each column
+				String itemNum = csvRecord.get(0);
+			    String owner = csvRecord.get(1);
+			    String category = csvRecord.get(2);
+			    String toolName = csvRecord.get(3);
+			    String condition = csvRecord.get(4);
+			    String price = csvRecord.get(5);
+			    String imagePath = csvRecord.get(6);
+	    
+			    items newItem = new items();
+			    newItem.setItemNum(itemNum);
+			    newItem.setOwner(owner);
+			    newItem.setCategory(category);
+			    newItem.setToolName(toolName);
+			    newItem.setCondition(condition);
+			    newItem.setPrice(price);
+			    newItem.setImagePath(imagePath);
+			    rentList.add(newItem);           
+	            }
+	        }
+        catch(Exception e) {
+        	System.out.println("fail here");
+        	e.printStackTrace();
+        }
+	    }
+	
 	/**
 	 * prints the list of items for development purposes only
 	 */
 	public void PrintItems () {
 		
 		//for loop that prints all the users in the itemlist
-		for (int i = 0; i < itemList.size(); i++)
+		for (int i = 0; i < rentList.size(); i++)
 		{
-			System.out.print(itemList.get(i).getItemNum()+ " | ");
-			System.out.print(itemList.get(i).getOwner()+ " | ");
-			System.out.print(itemList.get(i).getCategory()+ " | ");
-			System.out.print(itemList.get(i).getToolName()+ " | ");
-			System.out.print(itemList.get(i).getCondition()+ " | ");
-			System.out.print(itemList.get(i).getPrice() + " | ");
-			System.out.print(itemList.get(i).getImagePath());
+			System.out.print(rentList.get(i).getItemNum()+ " | ");
+			System.out.print(rentList.get(i).getOwner()+ " | ");
+			System.out.print(rentList.get(i).getCategory()+ " | ");
+			System.out.print(rentList.get(i).getToolName()+ " | ");
+			System.out.print(rentList.get(i).getCondition()+ " | ");
+			System.out.print(rentList.get(i).getPrice() + " | ");
+			System.out.print(rentList.get(i).getImagePath());
 			System.out.println();
 		}
 	}
@@ -104,6 +138,44 @@ public class itemArray {
 			write.append(toolName);
 			write.append(",");
 			write.append(condition);		
+			write.flush();
+			write.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * @param itemNum
+	 * @param owner
+	 * @param category
+	 * @param toolName
+	 * @param condition
+	 * @param price
+	 * @param imagePath
+	 */
+	public void AppendCSVRent (String itemNum, String owner, String category, String toolName, String condition, String price, String imagePath) {
+		
+		FileWriter write;
+		try {
+			write = new FileWriter(CSV_FILE_PATH_RENT);
+			
+			//System.out.println("inside AppendCVS" + fullName);
+			write.write(itemNum);
+			write.write(",");
+			write.write(owner);	
+			write.write(",");
+			write.write(category);
+			write.write(",");
+			write.write(toolName);
+			write.write(",");
+			write.write(condition);
+			write.write(",");
+			write.write(price);
+			write.write(",");
+			write.write(imagePath);
 			write.flush();
 			write.close();
 			
@@ -191,8 +263,10 @@ public class itemArray {
 	
 		
 	private static final String CSV_FILE_PATH = "src/resource/toollist.csv";
+	private static final String CSV_FILE_PATH_RENT = "src/resource/rentItems.csv";
 	public List<items> itemList = new ArrayList<items>();
 	public List<items> searchList = new ArrayList<items>();
+	public List<items> rentList = new ArrayList<items>();
 
 
 

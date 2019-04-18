@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="350.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="checkOut.MainController">
+   <children>
+      <Label layoutX="96.0" layoutY="83.0" text="Thank you for your Rental" />
+      <Label fx:id="Renter" layoutX="96.0" layoutY="124.0" text="Renter" />
+      <Label layoutX="144.0" layoutY="124.0" text="will be in contact with you" />
+   </children>
+</AnchorPane>

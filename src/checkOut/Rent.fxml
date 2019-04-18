@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkOut.MainController">
+   <children>
+      <Pane prefHeight="450.0" prefWidth="450.0">
+         <children>
+            <Label layoutX="151.0" layoutY="27.0" text="Rental Cart">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="Image" fitHeight="130.0" fitWidth="122.0" layoutX="14.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/img/not-found.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="147.0" layoutY="125.0" prefHeight="22.0" prefWidth="122.0">
+               <children>
+                  <Label fx:id="Name" contentDisplay="BOTTOM" prefHeight="22.0" prefWidth="125.0" text="Name" />
+               </children>
+            </HBox>
+            <HBox layoutX="275.0" layoutY="125.0" prefHeight="22.0" prefWidth="108.0">
+               <children>
+                  <Label fx:id="Price" contentDisplay="BOTTOM" prefHeight="22.0" prefWidth="100.0" text="Price" />
+               </children>
+            </HBox>
+            <HBox layoutX="214.0" layoutY="166.0" prefHeight="22.0" prefWidth="91.0">
+               <children>
+                  <Label fx:id="Condition" contentDisplay="BOTTOM" prefHeight="24.0" prefWidth="221.0" text="Condition" />
+               </children>
+            </HBox>
+            <HBox layoutX="198.0" layoutY="196.0" prefHeight="22.0" prefWidth="122.0">
+               <children>
+                  <Label fx:id="Renter" contentDisplay="BOTTOM" prefHeight="24.0" prefWidth="221.0" text="Renter" />
+               </children>
+            </HBox>
+            <Label layoutX="147.0" layoutY="168.0" text="Condition: " />
+            <Label layoutX="147.0" layoutY="199.0" text="Renter:" />
+            <CheckBox fx:id="AgreeCheck" layoutX="54.0" layoutY="362.0" mnemonicParsing="false" text="I agree to the terms and conditions" />
+            <TextArea layoutX="53.0" layoutY="270.0" prefHeight="92.0" prefWidth="360.0" text="I agree to pay the price stated above and that if I, &#10;the rentee, damage the tool, I will buy or fix&#10;the tool according to the renter." />
+            <Label layoutX="53.0" layoutY="257.0" text="Terms and Conditions">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Button layoutX="209.0" layoutY="391.0" mnemonicParsing="false" onAction="#rentComplete" text="Rent" />
+            <HBox alignment="CENTER" layoutX="7.0" layoutY="418.0" prefHeight="22.0" prefWidth="439.0">
+               <children>
+                  <Label fx:id="Status" alignment="CENTER" textFill="RED" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

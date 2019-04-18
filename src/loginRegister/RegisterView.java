@@ -17,7 +17,7 @@ public class RegisterView extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		try {
 			
-	        Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
+	        Parent root = FXMLLoader.load(getClass().getResource("/loginRegister/Register.fxml"));
 	        Scene scene = new Scene(root);
 	    
 	        primaryStage.setTitle("Register-ToolDepot"); 

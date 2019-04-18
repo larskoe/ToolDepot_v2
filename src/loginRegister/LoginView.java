@@ -16,7 +16,7 @@ import javafx.stage.Stage;
         @Override
         public void start(Stage primaryStage) {
         	try {
-                Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/loginRegister/Login.fxml"));
                 Scene scene = new Scene(root);
                 
                 //scene.getStylesheets().add(getClass().getResource("Login.css").toExternalForm());

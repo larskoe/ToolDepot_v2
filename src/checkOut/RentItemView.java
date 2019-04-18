@@ -1,4 +1,4 @@
-package loginRegister;
+package checkOut;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,27 +6,22 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * @author larskoester
- * view that loads the main screen for the application
- */
-public class MainView extends Application {
-
-	@Override
-	public void start(Stage primaryStage) throws Exception {
+public class RentItemView extends Application {
+	
+	public void start(Stage primaryStage) {
     	try {
-    		Parent root = FXMLLoader.load(getClass().getResource("loginRegister/Main.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Rent.fxml"));
             Scene scene = new Scene(root);
+            
+            //scene.getStylesheets().add(getClass().getResource("Login.css").toExternalForm());
         
-            primaryStage.setTitle("ToolDepot"); 
+            primaryStage.setTitle("Rent-ToolDepot"); 
             primaryStage.setScene(scene);
             primaryStage.show();
-           
         
         } catch(Exception e) {
             e.printStackTrace();
-        }
-        
+        } 
     }
 
     /**
@@ -37,3 +32,5 @@ public class MainView extends Application {
     }
     
 }
+
+

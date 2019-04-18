@@ -5,7 +5,9 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import checkOut.RentItemView;
 import itemDatabase.itemArray;
+import itemDatabase.items;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,9 +18,11 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 /**
  * @author larskoester
+ * @author TylerSmith
  * Main Controller for the Product page that implements Initializable and 
  * calls the method initialize on startup 
  */
@@ -35,7 +39,6 @@ public class MainController implements Initializable {
 		Alert alert = new Alert(AlertType.WARNING);
 		alert.setTitle("Alert Logout");
 		alert.setHeaderText("Are you sure you want to logout?");
-		//alert.setContentText("Are you sure?");
 		
 		//sets up yes and no button
 		ButtonType buttonTypeNo = new ButtonType("No");
@@ -62,6 +65,28 @@ public class MainController implements Initializable {
 	
 	public void rent (ActionEvent event) {
 		try {
+			String name = Name1.getText();
+			String price = Price1.getText();
+			
+			items rentItem = new items();
+			rentItem.setToolName(name);
+			rentItem.setPrice(price);
+			temp.rentList.add(rentItem);
+			
+			
+			for (int i = 0; i < temp.itemList.size(); i++)
+			{
+				if(temp.itemList.get(i).getToolName().equals(temp.rentList.get(0).getToolName()))
+				{
+					temp.AppendCSVRent(temp.itemList.get(i).getItemNum(), temp.itemList.get(i).getOwner(), 
+							temp.itemList.get(i).getCategory(), name, temp.itemList.get(i).getCondition(), 
+							price, temp.itemList.get(i).getImagePath());
+				}
+			}
+			
+			Stage primaryStage = new Stage();
+	    	RentItemView rent = new RentItemView();
+	    	rent.start(primaryStage);
 			
 			
 		} catch (Exception e) {
@@ -150,7 +175,6 @@ public class MainController implements Initializable {
 		    Image10.setImage(image10);
 			
 		} catch (Exception e) {
-			System.out.println("in initilize");
 			e.printStackTrace();
 		}
 	}
