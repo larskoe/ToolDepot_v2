@@ -39,6 +39,8 @@ public class itemArray {
 			    String category = csvRecord.get(2);
 			    String toolName = csvRecord.get(3);
 			    String condition = csvRecord.get(4);
+			    String price = csvRecord.get(5);
+			    String imagePath = csvRecord.get(6);
 	    
 			    items newItem = new items();
 			    newItem.setItemNum(itemNum);
@@ -46,6 +48,8 @@ public class itemArray {
 			    newItem.setCategory(category);
 			    newItem.setToolName(toolName);
 			    newItem.setCondition(condition);
+			    newItem.setPrice(price);
+			    newItem.setImagePath(imagePath);
 			    itemList.add(newItem);           
 	            }
 	        }
@@ -58,16 +62,18 @@ public class itemArray {
 	/**
 	 * prints the list of items for development purposes only
 	 */
-	public void PrintItems (List<items> searchList) {
+	public void PrintItems () {
 		
 		//for loop that prints all the users in the itemlist
-		for (int i = 0; i < searchList.size(); i++)
+		for (int i = 0; i < itemList.size(); i++)
 		{
-			System.out.print(searchList.get(i).getItemNum()+ " | ");
-			System.out.print(searchList.get(i).getOwner()+ " | ");
-			System.out.print(searchList.get(i).getCategory()+ " | ");
-			System.out.print(searchList.get(i).getToolName()+ " | ");
-			System.out.print(searchList.get(i).getCondition());
+			System.out.print(itemList.get(i).getItemNum()+ " | ");
+			System.out.print(itemList.get(i).getOwner()+ " | ");
+			System.out.print(itemList.get(i).getCategory()+ " | ");
+			System.out.print(itemList.get(i).getToolName()+ " | ");
+			System.out.print(itemList.get(i).getCondition()+ " | ");
+			System.out.print(itemList.get(i).getPrice() + " | ");
+			System.out.print(itemList.get(i).getImagePath());
 			System.out.println();
 		}
 	}

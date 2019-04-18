@@ -16,25 +16,7 @@ import userDatabase.UserArray;
  * class that is the main controller for the Login/Registration process.
  */
 public class MainController  {
-    @FXML
-    private Label lblStatus;
-    
-    @FXML
-    private TextField txtUserName;
-        
-    @FXML
-    private TextField txtPassword;
-    
-    @FXML
-    private TextField txtFullName;
-    
-    @FXML
-    private TextField txtEmail;
-    
-    @FXML
-    private TextField txtCity;
-   
-    
+	
     /**
      * Calls the login view from the Welcome screen
      * @param event once login button is clicked
@@ -53,27 +35,30 @@ public class MainController  {
      * @param event once login button is pressed it checks for correct credentials
      * @throws Exception throws an exception if it detects an error
      */
-    public void Login(ActionEvent event) throws Exception {
-    	temp.initilizeArray();
-    	check = temp.searchLogin(txtUserName.getText(), txtPassword.getText());
-    	
-        if(check == true) {
-            lblStatus.setText("Login Successful");
-            
-            Stage primaryStage = new Stage();
-            ProductView products = new ProductView();
-            products.start(primaryStage);
-            //MainView main = new MainView();
-            //main.start(primaryStage);
-            
-        }
-        else if (txtUserName.getText().isEmpty() || txtPassword.getText().isEmpty()) 
-        {
-        	lblStatus.setText("Please enter username and password. Fields cannot be empty!");
-        }
-        else {
-            lblStatus.setText("Login Failed. Please check username and password"); 
-        }
+    public void Login(ActionEvent event) {
+    	try {
+    		temp.initilizeArray();
+        	check = temp.searchLogin(txtUserName.getText(), txtPassword.getText());
+        	
+            if(check == true) {
+                lblStatus.setText("Login Successful");
+                
+                Stage primaryStage = new Stage();
+                ProductView products = new ProductView();
+                products.start(primaryStage);
+                
+            }
+            else if (txtUserName.getText().isEmpty() || txtPassword.getText().isEmpty()) 
+            {
+            	lblStatus.setText("Please enter username and password. Fields cannot be empty!");
+            }
+            else {
+                lblStatus.setText("Login Failed. Please check username and password"); 
+            }
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     }
     
     /**
@@ -94,40 +79,61 @@ public class MainController  {
      * @param event once the user clicks register it will fire
      * @throws Exception throws an exception if it detects an error
      */
-    public void Register (ActionEvent event) throws Exception {  	
-    	temp.initilizeArray();
-    	check = temp.searchRegEmail(txtEmail.getText());
-    	checkUser = temp.searchRegUser(txtUserName.getText());
-    	
-    	
-    	if (check == true) {
-    		lblStatus.setText("Email already in use. Please choose a different email");
-    	}
-    	else if (checkUser == true) {
-    		lblStatus.setText("Username already in use. Please choose a different username");
-    	}
-    	else {
-    		if (txtFullName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtUserName.getText().isEmpty() || txtPassword.getText().isEmpty() || txtCity.getText().isEmpty()) {
-    			lblStatus.setText("Please fill out all fields!");
-    		}
-    		else {
-    			temp.AppendCSV(txtFullName.getText(), txtEmail.getText(), txtUserName.getText(), txtPassword.getText(), txtCity.getText());
-    			temp.initilizeArray();
-    			lblStatus.setText("Registered succesfully");
-    			
-                Stage primaryStage = new Stage();
-                ProductView products = new ProductView();
-                products.start(primaryStage);
-    		}
-    	}    	
+    public void Register (ActionEvent event) { 
+    	try {
+    		temp.initilizeArray();
+        	check = temp.searchRegEmail(txtEmail.getText());
+        	checkUser = temp.searchRegUser(txtUserName.getText());
+        	
+        	
+        	if (check == true) {
+        		lblStatus.setText("Email already in use. Please choose a different email");
+        	}
+        	else if (checkUser == true) {
+        		lblStatus.setText("Username already in use. Please choose a different username");
+        	}
+        	else {
+        		if (txtFullName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtUserName.getText().isEmpty() || txtPassword.getText().isEmpty() || txtCity.getText().isEmpty()) {
+        			lblStatus.setText("Please fill out all fields!");
+        		}
+        		else {
+        			temp.AppendCSV(txtFullName.getText(), txtEmail.getText(), txtUserName.getText(), txtPassword.getText(), txtCity.getText());
+        			temp.initilizeArray();
+        			lblStatus.setText("Registered succesfully");
+        			
+                    Stage primaryStage = new Stage();
+                    ProductView products = new ProductView();
+                    products.start(primaryStage);
+        		}
+        	}    	
+    		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     }
     
+    /**
+     * variables and FXML variables needed
+     */
     private UserArray temp = new UserArray();
     private boolean check = false;
     private boolean checkUser = false;
-
-
-
+    @FXML
+    private Label lblStatus;
     
+    @FXML
+    private TextField txtUserName;
+        
+    @FXML
+    private TextField txtPassword;
+    
+    @FXML
+    private TextField txtFullName;
+    
+    @FXML
+    private TextField txtEmail;
+    
+    @FXML
+    private TextField txtCity;
 }
 

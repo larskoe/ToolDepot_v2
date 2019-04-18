@@ -151,7 +151,7 @@ public class UserArray {
 		return false;
 	}
 		
-	private static final String CSV_FILE_PATH = "src/resources/users.csv";
+	private static final String CSV_FILE_PATH = "src/resource/users.csv";
 	public List<users> userList = new ArrayList<users>();
 
 

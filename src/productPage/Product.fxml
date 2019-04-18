@@ -7,20 +7,20 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="productPage.MainController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="productPage.MainController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2135.0" prefWidth="800.0">
          <children>
-            <BorderPane prefHeight="1003.0" prefWidth="600.0">
+            <BorderPane prefHeight="2135.0" prefWidth="800.0">
                <top>
                   <MenuBar BorderPane.alignment="CENTER">
                     <menus>
@@ -31,7 +31,7 @@
                       </Menu>
                       <Menu mnemonicParsing="false" text="Profile">
                         <items>
-                          <MenuItem mnemonicParsing="false" onAction="#InitilizeScreen" text="Profile" />
+                          <MenuItem mnemonicParsing="false" text="Profile" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Help">
@@ -39,9 +39,14 @@
                           <MenuItem mnemonicParsing="false" text="User Guide" />
                         </items>
                       </Menu>
+                        <Menu mnemonicParsing="false">
+                           <graphic>
+                              <HBox prefHeight="10.0" prefWidth="525.0" />
+                           </graphic>
+                        </Menu>
                         <Menu mnemonicParsing="false" text="Logout">
                           <items>
-                            <MenuItem mnemonicParsing="false" onAction="#logout" text="logout" />
+                            <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
                           </items>
                         </Menu>
                     </menus>
@@ -53,48 +58,244 @@
                <center>
                   <TilePane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Pane prefHeight="250.0" prefWidth="250.0">
+                        <Pane prefHeight="400.0" prefWidth="400.0">
                            <children>
-                              <ImageView fx:id="Image1" fitHeight="104.0" fitWidth="187.0" layoutX="44.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label fx:id="Name1" layoutX="98.0" layoutY="117.0" text="Wrench" />
-                              <Label fx:id="Price1" layoutX="99.0" layoutY="141.0" text="\$25.99" />
-                              <Button fx:id="Rent1" layoutX="98.0" layoutY="166.0" mnemonicParsing="false" text="Rent" />
+                              <ImageView fx:id="Image1" fitHeight="250.0" fitWidth="250.0" layoutX="76.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name1" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price1" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent1" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
                            </children>
                         </Pane>
-                        <Pane prefHeight="250.0" prefWidth="250.0">
+                        <Pane prefHeight="400.0" prefWidth="400.0">
                            <children>
-                              <ImageView fitHeight="104.0" fitWidth="187.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../resources/wrench-01.jpg" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="Name2" layoutX="101.0" layoutY="117.0" text="Wrench" />
-                              <Label fx:id="Price2" layoutX="103.0" layoutY="145.0" text="\$25.99" />
-                              <Button fx:id="Rent2" layoutX="102.0" layoutY="177.0" mnemonicParsing="false" text="Rent" />
+                              <ImageView fx:id="Image2" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name2" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price2" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent2" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
                            </children>
                         </Pane>
-                        <Pane prefHeight="250.0" prefWidth="250.0">
+                        <Pane prefHeight="400.0" prefWidth="400.0">
                            <children>
-                              <ImageView fitHeight="104.0" fitWidth="187.0" layoutX="47.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../resources/wrench-01.jpg" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="Name3" layoutX="101.0" layoutY="117.0" text="Wrench" />
-                              <Label fx:id="Price3" layoutX="101.0" layoutY="141.0" text="\$25.99" />
-                              <Button fx:id="Rent3" layoutX="101.0" layoutY="170.0" mnemonicParsing="false" text="Rent" />
+                              <ImageView fx:id="Image3" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name3" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price3" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent3" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
                            </children>
                         </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
+                        <Pane prefHeight="400.0" prefWidth="400.0">
                            <children>
-                              <ImageView fitHeight="104.0" fitWidth="187.0" layoutX="47.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../resources/wrench-01.jpg" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="Name4" layoutX="101.0" layoutY="117.0" text="Wrench" />
-                              <Label fx:id="Price4" layoutX="101.0" layoutY="141.0" text="\$25.99" />
-                              <Button fx:id="Rent4" layoutX="102.0" layoutY="170.0" mnemonicParsing="false" text="Rent" />
+                              <ImageView fx:id="Image4" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name4" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price4" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent4" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="400.0" prefWidth="400.0">
+                           <children>
+                              <ImageView fx:id="Image5" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name5" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price5" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent211" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="400.0" prefWidth="400.0">
+                           <children>
+                              <ImageView fx:id="Image6" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name6" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price6" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent21" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="400.0" prefWidth="400.0">
+                           <children>
+                              <ImageView fx:id="Image7" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name7" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price7" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent212" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="400.0" prefWidth="400.0">
+                           <children>
+                              <ImageView fx:id="Image8" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name8" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price8" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent213" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="400.0" prefWidth="400.0">
+                           <children>
+                              <ImageView fx:id="Image9" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name9" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price9" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent214" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="400.0" prefWidth="400.0">
+                           <children>
+                              <ImageView fx:id="Image10" fitHeight="250.0" fitWidth="250.0" layoutX="86.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox layoutX="30.0" layoutY="268.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Name10" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="30.0" layoutY="310.0" prefHeight="22.0" prefWidth="339.0">
+                                 <children>
+                                    <Label fx:id="Price10" alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="339.0" text="Price">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="Rent215" layoutX="169.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" text="Rent" />
                            </children>
                         </Pane>
                      </children>

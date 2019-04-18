@@ -82,6 +82,22 @@ public class items {
 			this.condition = condition;
 		}
 
+		public String getPrice() {
+			return price;
+		}
+
+		public void setPrice(String price) {
+			this.price = price;
+		}
+
+		public String getImagePath() {
+			return imagePath;
+		}
+
+		public void setImagePath(String imagePath) {
+			this.imagePath = imagePath;
+		}
+
 		/**
 		 * variables needed for class
 		 */
@@ -90,5 +106,7 @@ public class items {
 	    private String category;
 	    private String toolName;
 	    private String condition;
+	    private String price;
+	    private String imagePath;
 	
 }
