@@ -81,23 +81,77 @@ public class items {
 		public void setCondition(String condition) {
 			this.condition = condition;
 		}
+		
 
+		/**
+		 * method that gets the price
+		 * @return returns the string price
+		 */
 		public String getPrice() {
 			return price;
 		}
 
+		/**
+		 * method that sets the price
+		 * @param price string that user input
+		 */
 		public void setPrice(String price) {
 			this.price = price;
 		}
+		
 
-		public String getImagePath() {
-			return imagePath;
+		/**
+		 * method that gets the image file location
+		 * @return returns the string image file location
+		 */
+		public String getImage() {
+			return image;
 		}
 
-		public void setImagePath(String imagePath) {
-			this.imagePath = imagePath;
+		/**
+		 * method that sets the image file location
+		 * @param image file location string
+		 */
+		public void setImage(String image) {
+			this.image = image;
+		}
+		
+		/**
+		 * method that gets the description
+		 * @return returns the string description
+		 */
+		public String getDescription() {
+			return description;
 		}
 
+	
+
+		/**
+		 * method that sets the tool description
+		 * @param string description of the tool
+		 */
+		public void setDescription(String description) {
+			this.description = description;
+		}
+		
+		/**
+		 * method that gets the availability of the tool
+		 * @return returns the string image file location
+		 */
+		public String getAvail() {
+			return avail;
+		}
+
+
+		/**
+		 * method that sets the availability
+		 * @param availability status string
+		 */
+		public void setAvail(String avail) {
+			this.avail = avail;
+		}
+		
+		
 		/**
 		 * variables needed for class
 		 */
@@ -107,6 +161,8 @@ public class items {
 	    private String toolName;
 	    private String condition;
 	    private String price;
-	    private String imagePath;
+	    private String image;
+	    private String description;
+	    private String avail;
 	
 }
