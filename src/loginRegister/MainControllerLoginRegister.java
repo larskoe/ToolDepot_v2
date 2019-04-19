@@ -15,7 +15,7 @@ import userDatabase.UserArray;
  * @author larskoester
  * class that is the main controller for the Login/Registration process.
  */
-public class MainController  {
+public class MainControllerLoginRegister  {
 	
     /**
      * Calls the login view from the Welcome screen

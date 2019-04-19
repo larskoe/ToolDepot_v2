@@ -12,12 +12,24 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import loginRegister.LoginView;
+import productPage.ProductView;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 
-public class MainController implements Initializable{
+/**
+ * @author larskoester
+ * This class is the main controller for the checkout process that implements Initializable, which
+ * means that it automatically calls the method initialize and loads the screen
+ */
+public class MainControllerCheckOut implements Initializable{
 	
-
+	/**
+	 * method that is called when the complete rental button is clicked, it checks if agreement is
+	 * checked and gives an error message if not. It loads a Information window if agreement is checked
+	 * @param event event parameter on the button
+	 */
 	public void rentComplete (ActionEvent event) {
 		
 		try {
@@ -37,9 +49,12 @@ public class MainController implements Initializable{
 				Optional<ButtonType> result = alert.showAndWait();
 				
 				//if button is yes, log out, else do nothing
-				if (result.get() == buttonTypeNo){
-					Platform.exit();
-					System.exit(0);
+				if (result.get() == buttonTypeYes){
+					
+					Stage primaryStage = new Stage();
+			    	ProductView product = new ProductView();
+			    	product.start(primaryStage);
+			    	
 				} else {
 				    //do nothing
 				}
@@ -54,26 +69,45 @@ public class MainController implements Initializable{
 		}
 	}
 	
+	/**
+	 * initializes product screen on startup as mainController implements Initializable
+	 * @param location is the location of file
+	 * @param ResourceBundle is where the resources are
+	 */
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
 			temp.initilizeArrayRent();
-			temp.PrintItems();
+			//temp.PrintItems();
+			Name.setStyle("-fx-stroke-width: 3");
 			Name.setText(temp.rentList.get(0).getToolName());
 			Price.setText(temp.rentList.get(0).getPrice());
 			Condition.setText(temp.rentList.get(0).getCondition());
 			Renter.setText(temp.rentList.get(0).getOwner());
+			
+			if (temp.rentList.get(0).getCondition().equals("excellent")) {
+				Condition.setStyle("-fx-text-fill: green");
+			} else if (temp.rentList.get(0).getCondition().equals("good")) {
+				Condition.setStyle("-fx-text-fill: blue");
+			} else if (temp.rentList.get(0).getCondition().equals("fair")) {
+				Condition.setStyle("-fx-text-fill: orange");
+			} else if (temp.rentList.get(0).getCondition().equals("poor")) {
+				Condition.setStyle("-fx-text-fill: red");
+			}
+			
 			
 			File file1 = new File(temp.rentList.get(0).getImagePath().toString());
 			Image image1 = new Image(file1.toURI().toString());
 		    Image.setImage(image1);
 			
 		} catch (Exception e) {
-			System.out.println("Fail here");
 			e.printStackTrace();
 		}
 		
 	}
 
+	/**
+	 * all variables and FXML variables needed
+	 */
 	private itemArray temp = new itemArray();
 	@FXML
 	private Label Name;

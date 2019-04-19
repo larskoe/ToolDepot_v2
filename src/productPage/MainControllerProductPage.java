@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -26,7 +27,7 @@ import javafx.stage.Stage;
  * Main Controller for the Product page that implements Initializable and 
  * calls the method initialize on startup 
  */
-public class MainController implements Initializable {
+public class MainControllerProductPage implements Initializable {
 
 	/**
 	 * Logout function with an alert box to confirm logout
@@ -63,10 +64,54 @@ public class MainController implements Initializable {
 		//System.out.println("print called!");
 	}
 	
+	/**
+	 * method that is called when rent
+	 * @param event
+	 */
 	public void rent (ActionEvent event) {
 		try {
-			String name = Name1.getText();
-			String price = Price1.getText();
+			String name;
+			String price;
+			Button btn = (Button) event.getSource();
+			String id = btn.getId();
+			temp.rentList.clear();
+			
+			if (id.equals("Rent1")) {
+				name = Name1.getText();
+				price = Price1.getText();
+			} else if (id.equals("Rent2")) {
+				name = Name2.getText();
+				price = Price2.getText();
+			} else if (id.equals("Rent3")) {
+				name = Name3.getText();
+				price = Price3.getText();
+			} else if (id.equals("Rent4")) {
+				name = Name4.getText();
+				price = Price4.getText();
+			} else if (id.equals("Rent5")) {
+				name = Name5.getText();
+				price = Price5.getText();
+			} else if (id.equals("Rent6")) {
+				name = Name6.getText();
+				price = Price6.getText();
+			} else if (id.equals("Rent7")) {
+				name = Name7.getText();
+				price = Price7.getText();
+			} else if (id.equals("Rent8")) {
+				name = Name8.getText();
+				price = Price8.getText();
+			} else if (id.equals("Rent8")) {
+				name = Name8.getText();
+				price = Price8.getText();
+			} else if (id.equals("Rent9")) {
+				name = Name9.getText();
+				price = Price9.getText();
+			} else {
+				name = Name10.getText();
+				price = Price10.getText();
+			}
+			
+			//System.out.println(id + ", " + name + ", " + price);
 			
 			items rentItem = new items();
 			rentItem.setToolName(name);
@@ -103,7 +148,19 @@ public class MainController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
 			temp.initilizeArray(); 
+			temp.initilizeArrayRent();
 		    
+			if(temp.rentList.isEmpty() != true)
+			{
+				//temp.PrintItems();
+				System.out.println("not empty.");
+			}
+			else 
+			{
+				//temp.PrintItems();
+				System.out.println("empty");
+			}
+			
 			//1st Pane
 			Name1.setText(temp.itemList.get(0).getToolName());	
 			Price1.setText("$" + temp.itemList.get(0).getPrice());
@@ -244,4 +301,7 @@ public class MainController implements Initializable {
 	private Label Price10;
 	@FXML
 	private ImageView Image10;
+	
+	@FXML 
+	private Button Button1;
 }

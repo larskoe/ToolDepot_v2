@@ -1,6 +1,7 @@
 package productPage;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,6 +21,10 @@ public class ProductView extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
             
+            primaryStage.focusedProperty().addListener((ov, onHidden, onShown) -> {
+                if(!primaryStage.isFocused())
+                    Platform.runLater(() -> primaryStage.close());
+            });
         
         } catch(Exception e) {
             e.printStackTrace();

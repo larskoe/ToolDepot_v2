@@ -89,7 +89,7 @@ public class UserArray {
 			write.append(",");
 			write.append(password);
 			write.append(",");
-			write.append(city);		
+			write.append(city);			
 			write.flush();
 			write.close();
 			

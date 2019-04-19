@@ -87,6 +87,22 @@ public class users {
 	}
 
 	/**
+	 * method that gets the ImagePath for profile picture
+	 * @return string of image path
+	 */
+	public String getImagePath() {
+		return ImagePath;
+	}
+
+	/**
+	 * method that sets the image path for profile picture
+	 * @param imagePath image path string
+	 */
+	public void setImagePath(String imagePath) {
+		ImagePath = imagePath;
+	}
+
+	/**
 	 * variables needed for class
 	 */
     private String fullName;
@@ -94,5 +110,6 @@ public class users {
     private String userName;
     private String password;
     private String city;
+    private String ImagePath;
     
 }

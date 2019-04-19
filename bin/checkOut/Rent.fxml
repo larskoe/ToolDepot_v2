@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkOut.MainController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkOut.MainControllerCheckOut">
    <children>
       <Pane prefHeight="450.0" prefWidth="450.0">
          <children>
@@ -42,13 +42,16 @@
             </HBox>
             <HBox layoutX="198.0" layoutY="196.0" prefHeight="22.0" prefWidth="122.0">
                <children>
-                  <Label fx:id="Renter" contentDisplay="BOTTOM" prefHeight="24.0" prefWidth="221.0" text="Renter" />
+                  <Label fx:id="Renter" contentDisplay="BOTTOM" prefHeight="24.0" prefWidth="221.0" text="Renter">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
                </children>
             </HBox>
             <Label layoutX="147.0" layoutY="168.0" text="Condition: " />
             <Label layoutX="147.0" layoutY="199.0" text="Renter:" />
             <CheckBox fx:id="AgreeCheck" layoutX="54.0" layoutY="362.0" mnemonicParsing="false" text="I agree to the terms and conditions" />
-            <TextArea layoutX="53.0" layoutY="270.0" prefHeight="92.0" prefWidth="360.0" text="I agree to pay the price stated above and that if I, &#10;the rentee, damage the tool, I will buy or fix&#10;the tool according to the renter." />
+            <TextArea editable="false" layoutX="53.0" layoutY="270.0" prefHeight="92.0" prefWidth="360.0" text="I agree to pay the price stated above and that if I, the rentee, damage the tool, I will buy or fixthe tool according to the renter." wrapText="true" />
             <Label layoutX="53.0" layoutY="257.0" text="Terms and Conditions">
                <font>
                   <Font size="10.0" />
