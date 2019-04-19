@@ -237,7 +237,7 @@ public class itemArray {
 
 	
 		
-	private static final String CSV_FILE_PATH = "src/resources/toollist2.csv";
+	private static final String CSV_FILE_PATH = "src/resource/toollist2.csv";
 	public List<items> itemList = new ArrayList<items>();
 	public List<items> searchList = new ArrayList<items>();
 	private items item = new items();
