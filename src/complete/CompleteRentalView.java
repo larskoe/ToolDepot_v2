@@ -10,7 +10,7 @@ public class CompleteRentalView extends Application {
 	
 	public void start(Stage primaryStage) {
     	try {
-            Parent root = FXMLLoader.load(getClass().getResource("CompleteRentalView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("CompleteRental.fxml"));
             Scene scene = new Scene(root);
             
             //scene.getStylesheets().add(getClass().getResource("Login.css").toExternalForm());

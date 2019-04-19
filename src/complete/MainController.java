@@ -15,6 +15,8 @@ public class MainController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
 			temp.initilizeArrayRent();
+			System.out.println("Complete rental");
+			temp.PrintItems();
 			Renter.setText(temp.rentList.get(0).getOwner());
 			
 		} catch (IOException e) {
