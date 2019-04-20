@@ -6,14 +6,12 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 import itemDatabase.itemArray;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import loginRegister.LoginView;
 import productPage.ProductView;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
@@ -77,12 +75,15 @@ public class MainControllerCheckOut implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
 			temp.initilizeArrayRent();
-			//temp.PrintItems();
+			temp.PrintItems(temp.rentList);
 			Name.setStyle("-fx-stroke-width: 3");
 			Name.setText(temp.rentList.get(0).getToolName());
 			Price.setText(temp.rentList.get(0).getPrice());
 			Condition.setText(temp.rentList.get(0).getCondition());
 			Renter.setText(temp.rentList.get(0).getOwner());
+			Description.setText(temp.rentList.get(0).getDescription());
+			Avail.setText(temp.rentList.get(0).getAvail());
+			
 			
 			if (temp.rentList.get(0).getCondition().equals("excellent")) {
 				Condition.setStyle("-fx-text-fill: green");
@@ -94,8 +95,14 @@ public class MainControllerCheckOut implements Initializable{
 				Condition.setStyle("-fx-text-fill: red");
 			}
 			
+			if (temp.rentList.get(0).getAvail().contains("Not")) {
+				Avail.setStyle("-fx-text-fill: red");
+			} else {
+				Avail.setStyle("-fx-text-fill: green"); 
+			}
 			
-			File file1 = new File(temp.rentList.get(0).getImagePath().toString());
+			
+			File file1 = new File(temp.rentList.get(0).getImage().toString());
 			Image image1 = new Image(file1.toURI().toString());
 		    Image.setImage(image1);
 			
@@ -123,4 +130,8 @@ public class MainControllerCheckOut implements Initializable{
 	private ImageView Image;
 	@FXML 
 	private Label Status;
+	@FXML 
+	private Label Description;
+	@FXML
+	private Label Avail;
 }
