@@ -72,6 +72,12 @@ public class MainControllerAddItem implements Initializable{
 		
 	}
 	
+	/**
+	 * reads the text fields and combo boxes into a new item
+	 *
+	 * @param event the event
+	 * @throws Exception the exception
+	 */
 	public void add(ActionEvent event) throws Exception {
 		
 		addThisItem.setCategory(category.getValue());
@@ -113,6 +119,9 @@ public class MainControllerAddItem implements Initializable{
 		
 	}
 	
+	/**
+	 * Adds the new item to the database
+	 */
 	public static void AddNew() {
 		temp.AppendCSV(addThisItem);
 	}

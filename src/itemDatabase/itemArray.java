@@ -244,10 +244,14 @@ public class itemArray {
 		return null;
 	}
 	
+	/**
+	 * Find last item num from the database
+	 *
+	 * @return the int last
+	 */
 	public int findLastItemNum() {
 		String slast = itemList.get(itemList.size() - 1).getItemNum();
 		int last = Integer.parseInt(slast);
-		
 		return last;
 	}
 
