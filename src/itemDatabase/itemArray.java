@@ -96,7 +96,7 @@ public class itemArray {
 	 * @param toolname string from text field password
 	 * @param condition string from text field city
 	 */
-	public void AppendCSV (String itemNum, String owner, String category, String toolName, String condition) {
+	public void AppendCSV (items temp) {
 		
 		FileWriter write;
 		try {
@@ -104,15 +104,24 @@ public class itemArray {
 			
 			//System.out.println("inside AppendCVS" + fullName);
 			write.append("\n");
-			write.append(itemNum);
+			write.append(temp.getItemNum());
 			write.append(",");
-			write.append(owner);	
+			write.append(temp.getOwner());	
 			write.append(",");
-			write.append(category);
+			write.append(temp.getCategory());
 			write.append(",");
-			write.append(toolName);
+			write.append(temp.getToolName());
 			write.append(",");
-			write.append(condition);		
+			write.append(temp.getCondition());
+			write.append(",");
+			write.append(temp.getPrice());
+			write.append(",");
+			write.append(temp.getImage());
+			write.append(",");
+			write.append(temp.getDescription());
+			write.append(",");
+			write.append(temp.getAvail());
+			write.append(",");
 			write.flush();
 			write.close();
 			
@@ -233,6 +242,13 @@ public class itemArray {
 			}
  		}
 		return null;
+	}
+	
+	public int findLastItemNum() {
+		String slast = itemList.get(itemList.size() - 1).getItemNum();
+		int last = Integer.parseInt(slast);
+		
+		return last;
 	}
 
 	
