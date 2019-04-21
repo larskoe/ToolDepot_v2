@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
-
-import DisplayTool.DisplayItem;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,9 +19,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 import itemDatabase.itemArray;
 import itemDatabase.items;
-
+import DisplayTool.DisplayItem;
 
 
 
