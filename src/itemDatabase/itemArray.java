@@ -44,8 +44,7 @@ public class itemArray {
 			    String description = csvRecord.get(7);
 			    String avail = csvRecord.get(8);
 			    if (avail.equals("")) avail = "Available";
-			    //else avail = "Return Date " + avail;
-			    else avail = "Not Availiable until " + avail;
+			    else avail = "Return Date " + avail;
 	    
 			    items newItem = new items();
 			    newItem.setItemNum(itemNum);
@@ -61,48 +60,7 @@ public class itemArray {
 	            }
 	        }
         catch(Exception e) {
-        	System.out.println("fail here in item list");
-        	e.printStackTrace();
-        }
-	    }
-	
-	/**
-	 * method that initilizes the rent items array list from the rent items csv file
-	 * @throws IOException if something goes wrong 
-	 */
-	public void initilizeArrayRent () throws IOException {
-        try (Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH_RENT));
-             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT))
-        {
-        	rentList.clear();
-			for (CSVRecord csvRecord : csvParser) {
-			          
-				// Accessing values by the names assigned to each column
-				String itemNum = csvRecord.get(0);
-			    String owner = csvRecord.get(1);
-			    String category = csvRecord.get(2);
-			    String toolName = csvRecord.get(3);
-			    String condition = csvRecord.get(4);
-			    String price = csvRecord.get(5);
-			    String image = csvRecord.get(6);
-			    String description = csvRecord.get(7);
-			    String avail = csvRecord.get(8);
-	    
-			    items newItem = new items();
-			    newItem.setItemNum(itemNum);
-			    newItem.setOwner(owner);
-			    newItem.setCategory(category);
-			    newItem.setToolName(toolName);
-			    newItem.setCondition(condition);
-			    newItem.setPrice(price);
-			    newItem.setImage(image);
-			    newItem.setDescription(description);
-			    newItem.setAvail(avail);
-			    rentList.add(newItem);           
-	            }
-	        }
-        catch(Exception e) {
-        	System.out.println("fail here in rent list");
+        	System.out.println("fail here");
         	e.printStackTrace();
         }
 	    }
@@ -121,12 +79,14 @@ public class itemArray {
 			System.out.print(searchList.get(i).getToolName()+ " | ");
 			System.out.print(searchList.get(i).getCondition() + " | ");
 			System.out.print(searchList.get(i).getPrice()+ " | ");
-			System.out.print(searchList.get(i).getImage()+ " | ");
-			System.out.print(searchList.get(i).getDescription()+ " | ");
-			System.out.print(searchList.get(i).getAvail());	
+			System.out.print(searchList.get(i).getImage());
+			System.out.print(searchList.get(i).getDescription());
+			System.out.print(searchList.get(i).getAvail());
+			
 			System.out.println();
 		}
 	}
+	
 	
 	/**
 	 * method that appends a new user(register) in the csv file. It uses a FileWriter to append the file
@@ -136,31 +96,32 @@ public class itemArray {
 	 * @param toolname string from text field password
 	 * @param condition string from text field city
 	 */
-	public void AppendCSVRent (String itemNum, String owner, String category, String toolName, String condition, String price, String image, String description, String avail) {
+	public void AppendCSV (items temp) {
 		
 		FileWriter write;
 		try {
-			write = new FileWriter(CSV_FILE_PATH_RENT);
+			write = new FileWriter(CSV_FILE_PATH,true);
 			
 			//System.out.println("inside AppendCVS" + fullName);
 			write.append("\n");
-			write.append(itemNum);
+			write.append(temp.getItemNum());
 			write.append(",");
-			write.append(owner);	
+			write.append(temp.getOwner());	
 			write.append(",");
-			write.append(category);
+			write.append(temp.getCategory());
 			write.append(",");
-			write.append(toolName);
+			write.append(temp.getToolName());
 			write.append(",");
-			write.append(condition);
+			write.append(temp.getCondition());
 			write.append(",");
-			write.append(price);
+			write.append(temp.getPrice());
 			write.append(",");
-			write.append(image);
+			write.append(temp.getImage());
 			write.append(",");
-			write.append(description);
+			write.append(temp.getDescription());
 			write.append(",");
-			write.append(avail);
+			write.append(temp.getAvail());
+			write.append(",");
 			write.flush();
 			write.close();
 			
@@ -282,14 +243,23 @@ public class itemArray {
  		}
 		return null;
 	}
+	
+	/**
+	 * Find last item num from the database
+	 *
+	 * @return the int last
+	 */
+	public int findLastItemNum() {
+		String slast = itemList.get(itemList.size() - 1).getItemNum();
+		int last = Integer.parseInt(slast);
+		return last;
+	}
 
 	
 		
 	private static final String CSV_FILE_PATH = "src/resource/toollist2.csv";
-	private static final String CSV_FILE_PATH_RENT = "src/resource/rentitems.csv";
 	public List<items> itemList = new ArrayList<items>();
 	public List<items> searchList = new ArrayList<items>();
-	public List<items> rentList = new ArrayList<items>();
 	private items item = new items();
 
 

@@ -7,7 +7,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import Search.MainController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,8 +16,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.TextFlow;
+
 import itemDatabase.itemArray;
 import itemDatabase.items;
+import Search.MainController;
 
 public class MainControllerDisplay implements Initializable{
 	
@@ -49,10 +50,12 @@ public class MainControllerDisplay implements Initializable{
 			choiceName = "Tool Name: " + choice.getToolName();
 			choiceOwner = "Current Owner: " + choice.getOwner();
 			choicePrice = "Price Per Day: $" + choice.getPrice();
-			choiceImage = choice.getImage();
+			choiceImage = choice.getImage(); 
 			choiceCondition = "Current Condition: " + choice.getCondition();
 			choiceDescription = "Product Description: \n" + choice.getDescription();
 			choiceAvail = "Availability Status: \n" + choice.getAvail();
+			
+			choiceImageError = "src/img/no_image.png";
 			
 			price.setText(choicePrice);
 			toolName.setText(choiceName);
@@ -63,6 +66,10 @@ public class MainControllerDisplay implements Initializable{
 			
 			File file = new File(choiceImage.toString());
 			pic = new Image(file.toURI().toString());
+			if (pic.isError()) {
+				File fileErr = new File(choiceImageError.toString());
+				pic = new Image(fileErr.toURI().toString());
+			}
 		    Pic.setImage(pic);
 			
 		} catch (IOException e) {
@@ -86,6 +93,7 @@ public class MainControllerDisplay implements Initializable{
 	private String choiceOwner;
 	private String choicePrice;
 	private String choiceImage;
+	private String choiceImageError;
 	private String choiceCondition;
 	private String choiceDescription;
 	private String choiceAvail;

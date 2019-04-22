@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
-
-import DisplayTool.DisplayItem;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,9 +19,20 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 import itemDatabase.itemArray;
 import itemDatabase.items;
+import DisplayTool.DisplayItem;
 
+<<<<<<< HEAD
+=======
+
+/**
+ * @author tyler
+ * class that implements searching for items in database 
+ */
+
+>>>>>>> 4cd4ec0a05cb96d5a5cdef5792810790f39589d4
 public class MainController implements Initializable {
 	
 	@FXML
@@ -48,6 +57,11 @@ public class MainController implements Initializable {
 
 	ObservableList<String> categoryList = FXCollections.observableArrayList("tool", "basic tool", "power tool","ladder", "saw", "cement", "wood working", "motorized", "painting");
 	
+	/* (non-Javadoc)
+	 * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)
+	 * 
+	 * Initializes window
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
@@ -64,6 +78,13 @@ public class MainController implements Initializable {
 		
 	}
 	
+	/**
+	 * Shows all items in database
+	 * action on a button press called show all
+	 *
+	 * @param event the event
+	 * @throws Exception the exception
+	 */
 	public void showAll(ActionEvent event) throws Exception {
 		searchList.clear();
 		searchList = temp.searchItemName("");
@@ -72,6 +93,13 @@ public class MainController implements Initializable {
 		}
 	}
 	
+	/**
+	 * allows user to choose category and updates list of items
+	 * action on a combobox.
+	 *
+	 * @param event the event
+	 * @throws Exception the exception
+	 */
 	public void chooseCat(ActionEvent event) throws Exception {
 		
 		searchList.clear();
@@ -83,6 +111,13 @@ public class MainController implements Initializable {
 		}
 	}
 
+	/**
+	 * Searches item list for a keyword
+	 * action on a button press that reads from a textfield
+	 *
+	 * @param event the event
+	 * @throws Exception the exception
+	 */
 	public void searchKey(ActionEvent event) throws Exception {
 		
 		searchList.clear();
@@ -100,10 +135,21 @@ public class MainController implements Initializable {
 		}
 	}
 	
+	/**
+	 * Clears list of items
+	 *
+	 * @param event the event
+	 * @throws Exception the exception
+	 */
 	public void clear(ActionEvent event) throws Exception {
 		listview.getItems().clear();
 	}
 	
+	/**
+	 * Selects the item and opens a new window to view item
+	 *
+	 * @param event the event
+	 */
 	public void select(ActionEvent event) {
 		try {
 			name = listview.getSelectionModel().getSelectedItems();
