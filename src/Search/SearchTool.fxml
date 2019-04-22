@@ -6,14 +6,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Search.MainControllerSearch">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Search.MainControllerSearch">
    <children>
       <ComboBox fx:id="category" layoutX="237.0" layoutY="14.0" onAction="#chooseCat" prefWidth="200.0" promptText="Choose Tool Category" />
       <TextField fx:id="keyword" layoutX="14.0" layoutY="14.0" promptText="Enter Keyword" />
       <Button fx:id="search" layoutX="171.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchKey" text="Search" />
       <ListView fx:id="listview" accessibleText="Select" layoutX="14.0" layoutY="100.0" prefHeight="409.0" prefWidth="200.0" />
       <Button fx:id="clear" layoutX="37.0" layoutY="516.0" mnemonicParsing="false" onAction="#clear" text="Clear List" />
-      <Button fx:id="select" layoutX="119.0" layoutY="516.0" mnemonicParsing="false" onAction="#select" text="Select" />
+      <Button fx:id="select" layoutX="119.0" layoutY="516.0" mnemonicParsing="false" onAction="#select" text="View" />
       <Button fx:id="showAll" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" onAction="#showAll" text="Show All" />
    </children>
 </AnchorPane>

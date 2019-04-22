@@ -44,7 +44,7 @@ public class itemArray {
 			    String description = csvRecord.get(7);
 			    String avail = csvRecord.get(8);
 			    if (avail.equals("")) avail = "Available";
-			    else avail = "Return Date " + avail;
+			    else avail = "Not Available until " + avail;
 	    
 			    items newItem = new items();
 			    newItem.setItemNum(itemNum);

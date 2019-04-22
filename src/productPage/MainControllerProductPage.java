@@ -4,7 +4,6 @@ import java.io.File;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import AddItem.AddItemView;
 import DisplayTool.DisplayItemView;
 import Search.SearchView;

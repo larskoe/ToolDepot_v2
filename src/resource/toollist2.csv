@@ -1,12 +1,12 @@
-101,tyler,basic tool,hammer,excellent,19.99,src/resource/img/101.png,This tool is great for projects,7/9/2019
-102,lars,power tool,drill,good,15.99,src/img/102.png,This tool is great for projects,
-103,tyler,ladder,10 foot ladder,fair,9.99,src/img/103.png,This tool is great for projects,
-104,lars,saw,table saw,good,39.99,src/img/104.png,This tool is great for projects,5/1/2019
-105,tyler,wood working,chisel,fair,5.5,src/img/105.png,This tool is great for projects,
-106,lars,cement,cement mixer,good,10,src/img/106.png,This tool is great for projects,5/5/2019
-107,tyler,painting,large paint roller,fair,2.99,src/img/107.png,This tool is great for projects,
-108,lars,motorized,lawnmower,good,50.99,src/img/108.png,This tool is great for projects,
-109,tyler,basic tool,mallet,poor,3.79,src/img/109.png,This tool is great for projects,5/18/2019
-110,lars,power tool,sander,good,18.99,src/img/110.png,This tool is great for projects,
-
-111,lars,saw,Reciprocating Saw,Good,40.50,src/img/111.png,Cordless, (4) Position Blade Clamp, Variable Speed Trigger,,
+101,tyler,Basic Tool,Hammer,Excellent,19.99,src/resource/img/101.png,This tool is great for projects,7/9/2019
+102,lars,Power Tool,Drill,Good,15.99,src/img/102.png,This tool is great for projects,
+103,tyler,Ladder,10 Foot Ladder,Fair,9.99,src/img/103.png,This tool is great for projects,
+104,lars,Saw,Table Saw,Good,39.99,src/img/104.png,This tool is great for projects,5/1/2019
+105,tyler,Wood Working,Chisel,Fair,5.5,src/img/105.png,This tool is great for projects,
+106,lars,Cement,Cement Mixer,Good,10,src/img/106.png,This tool is great for projects,5/5/2019
+107,tyler,Painting,Large Paint Roller,Fair,2.99,src/img/107.png,This tool is great for projects,
+108,lars,Motorized,Lawnmower,Good,50.99,src/img/108.png,This tool is great for projects,
+109,tyler,Basic Tool,Mallet,Poor,3.79,src/img/109.png,This tool is great for projects,5/18/2019
+110,lars,Power Tool,Sander,Good,18.99,src/img/110.png,This tool is great for projects,
+111,lars,saw,Cordless Reciprocating Saw,Good,40.50,src/img/111.png,This is a bare tool and 20.0 Volt saw, which is cordless.,,
+112,tyler,ladder,4 ft. Ladder,Fair,28.90,src/img/112.png,Ladder that is 4 feet tall.,,
