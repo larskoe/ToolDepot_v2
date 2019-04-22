@@ -24,14 +24,15 @@
                <top>
                   <MenuBar BorderPane.alignment="CENTER">
                     <menus>
-                      <Menu mnemonicParsing="false" text="Search">
+                      <Menu mnemonicParsing="false" text="Tools">
                         <items>
                           <MenuItem mnemonicParsing="false" onAction="#search" text="Search for Tools" />
+                              <MenuItem mnemonicParsing="false" onAction="#add" text="Add Tools to Rent" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Profile">
                         <items>
-                          <MenuItem mnemonicParsing="false" text="Profile" />
+                          <MenuItem mnemonicParsing="false" onAction="#profile" text="Profile" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Help">
@@ -80,7 +81,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent1" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -105,7 +106,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent2" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">

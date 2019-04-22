@@ -41,6 +41,20 @@ public class MainControllerLoginRegister  {
         	check = temp.searchLogin(txtUserName.getText(), txtPassword.getText());
         	
             if(check == true) {
+            	String username;
+            	String password;
+            	
+            	username = txtUserName.getText();
+            	password = txtPassword.getText();
+            	
+            	for (int i = 0; i < temp.userList.size(); i++) {
+            		
+            		if(username.equals(temp.userList.get(i).getUserName()) && password.equals(temp.userList.get(i).getPassword())) {
+            			temp.AppendCSVSession(temp.userList.get(i).getFullName(), temp.userList.get(i).getEmail(), username, 
+            					password, temp.userList.get(i).getCity(), temp.userList.get(i).getImagePath());
+            		}
+            	}
+            	
                 lblStatus.setText("Login Successful");
                 
                 Stage primaryStage = new Stage();
@@ -57,6 +71,7 @@ public class MainControllerLoginRegister  {
             }
 			
 		} catch (Exception e) {
+			System.out.println("in login method");
 			e.printStackTrace();
 		}
     }
@@ -93,11 +108,18 @@ public class MainControllerLoginRegister  {
         		lblStatus.setText("Username already in use. Please choose a different username");
         	}
         	else {
-        		if (txtFullName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtUserName.getText().isEmpty() || txtPassword.getText().isEmpty() || txtCity.getText().isEmpty()) {
+        		if (txtFullName.getText().isEmpty() || txtEmail.getText().isEmpty() || txtUserName.getText().isEmpty() || 
+        				txtPassword.getText().isEmpty() || txtCity.getText().isEmpty()) {
+        			
         			lblStatus.setText("Please fill out all fields!");
         		}
         		else {
-        			temp.AppendCSV(txtFullName.getText(), txtEmail.getText(), txtUserName.getText(), txtPassword.getText(), txtCity.getText());
+        			temp.AppendCSV(txtFullName.getText(), txtEmail.getText(), txtUserName.getText(), txtPassword.getText(), 
+        					txtCity.getText(), "src/img/no_image.png");
+        			
+        			temp.AppendCSVSession(txtFullName.getText(), txtEmail.getText(), txtUserName.getText(), txtPassword.getText(), txtCity.getText(), "src/img/no_image.png");
+        			
+        			temp.initilizeArraySession();
         			temp.initilizeArray();
         			lblStatus.setText("Registered succesfully");
         			

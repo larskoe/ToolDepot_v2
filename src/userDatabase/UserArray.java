@@ -35,6 +35,7 @@ public class UserArray {
 			    String username = csvRecord.get(2);
 			    String password = csvRecord.get(3);
 			    String city = csvRecord.get(4);
+			    String ImagePath = csvRecord.get(5);
 	    
 			    users newUser = new users();
 			    newUser.setFullName(fullName);
@@ -42,7 +43,39 @@ public class UserArray {
 			    newUser.setUserName(username);
 			    newUser.setPassword(password);
 			    newUser.setCity(city);
+			    newUser.setImagePath(ImagePath);
 			    userList.add(newUser);           
+	            }
+	        }
+	    }
+	
+	/**
+	 * method that reads from the CSV file and initializes an array list for later use. uses CVSParser
+	 * @throws IOException throws an IO exception if an error occurs
+	 */
+	public void initilizeArraySession () throws IOException {
+        try (Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH_SESSION));
+             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT))
+        {
+        	sessionList.clear();
+			for (CSVRecord csvRecord : csvParser) {
+			          
+				// Accessing values by the names assigned to each column
+				String fullName = csvRecord.get(0);
+			    String email = csvRecord.get(1);
+			    String username = csvRecord.get(2);
+			    String password = csvRecord.get(3);
+			    String city = csvRecord.get(4);
+			    String ImagePath = csvRecord.get(5);
+	    
+			    users newUser = new users();
+			    newUser.setFullName(fullName);
+			    newUser.setEmail(email);
+			    newUser.setUserName(username);
+			    newUser.setPassword(password);
+			    newUser.setCity(city);
+			    newUser.setImagePath(ImagePath);
+			    sessionList.add(newUser);           
 	            }
 	        }
 	    }
@@ -64,6 +97,41 @@ public class UserArray {
 		}
 	}
 	
+	/**
+	 * method that writes a new user session in the csv file. It uses a FileWriter to append the file
+	 * @param fullName string from text field name
+	 * @param email string from text field email
+	 * @param username string from text field username
+	 * @param password string from text field password
+	 * @param city string from text field city
+	 */
+	public void AppendCSVSession (String fullName, String email, String username, String password, String city, String ImagePath) {
+		
+		FileWriter write;
+		try {
+			write = new FileWriter(CSV_FILE_PATH_SESSION);
+			
+			//System.out.println("inside AppendCVS" + fullName);
+			write.write(fullName);
+			write.write(",");
+			write.write(email);	
+			write.write(",");
+			write.write(username);
+			write.write(",");
+			write.write(password);
+			write.write(",");
+			write.write(city);	
+			write.write(",");
+			write.write(ImagePath);		
+			write.flush();
+			write.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 	
 	/**
 	 * method that appends a new user(register) in the csv file. It uses a FileWriter to append the file
@@ -73,7 +141,7 @@ public class UserArray {
 	 * @param password string from text field password
 	 * @param city string from text field city
 	 */
-	public void AppendCSV (String fullName, String email, String username, String password, String city) {
+	public void AppendCSV (String fullName, String email, String username, String password, String city, String ImagePath) {
 		
 		FileWriter write;
 		try {
@@ -89,7 +157,9 @@ public class UserArray {
 			write.append(",");
 			write.append(password);
 			write.append(",");
-			write.append(city);			
+			write.append(city);	
+			write.append(",");
+			write.append(ImagePath);	
 			write.flush();
 			write.close();
 			
@@ -152,7 +222,9 @@ public class UserArray {
 	}
 		
 	private static final String CSV_FILE_PATH = "src/resource/users.csv";
+	private static final String CSV_FILE_PATH_SESSION = "src/resource/currentSession.csv";
 	public List<users> userList = new ArrayList<users>();
+	public List<users> sessionList = new ArrayList<users>();
 
 
 }

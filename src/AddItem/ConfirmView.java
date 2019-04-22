@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import AddItem.MainControllerAddItem;
 
 
-public class Confirm extends Application {
+public class ConfirmView extends Application {
 
 
 //@Override

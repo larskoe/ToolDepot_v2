@@ -5,6 +5,9 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import AddItem.AddItemView;
+import DisplayTool.DisplayItemView;
+import Search.SearchView;
 import checkOut.RentItemView;
 import itemDatabase.itemArray;
 import itemDatabase.items;
@@ -20,6 +23,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import profile.ProfileView;
 
 /**
  * @author larskoester
@@ -49,6 +53,7 @@ public class MainControllerProductPage implements Initializable {
 		
 		//if button is yes, log out, else do nothing
 		if (result.get() == buttonTypeYes){
+			temp.rentList.clear();
 			Platform.exit();
 			System.exit(0);
 		} else {
@@ -56,12 +61,41 @@ public class MainControllerProductPage implements Initializable {
 		}
 	}
 	
-	public void search (ActionEvent event) throws Exception {
-		//System.out.println("Search called!");
-		temp.initilizeArray();
-		//System.out.println("Initialize called!");
-		//temp.PrintUsers();
-		//System.out.println("print called!");
+	/**
+	 * this method calls the search scene when clicked in the menu bar
+	 * @param event event handler
+	 */
+	public void search (ActionEvent event) {
+		try {
+			Stage primaryStage = new Stage();
+            SearchView search = new SearchView();
+            search.start(primaryStage);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void view (ActionEvent event) {
+		try {
+			Stage primaryStage = new Stage();
+            DisplayItemView display = new DisplayItemView();
+            display.start(primaryStage);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void add (ActionEvent event) {
+		try {
+			Stage primaryStage = new Stage();
+            AddItemView add = new AddItemView();
+            add.start(primaryStage);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -111,7 +145,6 @@ public class MainControllerProductPage implements Initializable {
 				price = Price10.getText();
 			}
 			
-			//System.out.println(id + ", " + name + ", " + price);
 			
 			items rentItem = new items();
 			rentItem.setToolName(name);
@@ -139,6 +172,13 @@ public class MainControllerProductPage implements Initializable {
 		}
 	}
 	
+	public void profile (ActionEvent event) {
+		
+		Stage primaryStage = new Stage();
+        ProfileView profile = new ProfileView();
+        profile.start(primaryStage);
+	}
+	
 
 	/**
 	 * initializes product screen on startup as mainController implements Initializable
@@ -149,17 +189,6 @@ public class MainControllerProductPage implements Initializable {
 		try {
 			temp.initilizeArray(); 
 			temp.initilizeArrayRent();
-		    
-			if(temp.rentList.isEmpty() != true)
-			{
-				//temp.PrintItems();
-				System.out.println("not empty.");
-			}
-			else 
-			{
-				//temp.PrintItems();
-				System.out.println("empty");
-			}
 			
 			//1st Pane
 			Name1.setText(temp.itemList.get(0).getToolName());	

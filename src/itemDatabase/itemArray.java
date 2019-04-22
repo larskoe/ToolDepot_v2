@@ -62,6 +62,47 @@ public class itemArray {
         catch(Exception e) {
         	System.out.println("fail here");
         	e.printStackTrace();
+        	}
+        }
+	
+	/**
+	 * method that initilizes the rent items array list from the rent items csv file
+	 * @throws IOException if something goes wrong 
+	 */
+	public void initilizeArrayRent () throws IOException {
+        try (Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH_RENT));
+             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT))
+        {
+        	rentList.clear();
+			for (CSVRecord csvRecord : csvParser) {
+			          
+				// Accessing values by the names assigned to each column
+				String itemNum = csvRecord.get(0);
+			    String owner = csvRecord.get(1);
+			    String category = csvRecord.get(2);
+			    String toolName = csvRecord.get(3);
+			    String condition = csvRecord.get(4);
+			    String price = csvRecord.get(5);
+			    String image = csvRecord.get(6);
+			    String description = csvRecord.get(7);
+			    String avail = csvRecord.get(8);
+	    
+			    items newItem = new items();
+			    newItem.setItemNum(itemNum);
+			    newItem.setOwner(owner);
+			    newItem.setCategory(category);
+			    newItem.setToolName(toolName);
+			    newItem.setCondition(condition);
+			    newItem.setPrice(price);
+			    newItem.setImage(image);
+			    newItem.setDescription(description);
+			    newItem.setAvail(avail);
+			    rentList.add(newItem);           
+	            }
+	        }
+        catch(Exception e) {
+        	System.out.println("fail here in rent list");
+        	e.printStackTrace();
         }
 	    }
 	
@@ -129,6 +170,47 @@ public class itemArray {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * method that appends a new user(register) in the csv file. It uses a FileWriter to append the file
+	 * @param itemnum string from text field name
+	 * @param owner string from text field email
+	 * @param category string from text field username
+	 * @param toolname string from text field password
+	 * @param condition string from text field city
+	 */
+	public void AppendCSVRent (String itemNum, String owner, String category, String toolName, String condition, String price, String image, String description, String avail) {
+		
+		FileWriter write;
+		try {
+			write = new FileWriter(CSV_FILE_PATH_RENT);
+			
+			//System.out.println("inside AppendCVS" + fullName);
+			write.write(itemNum);
+			write.write(",");
+			write.write(owner);	
+			write.write(",");
+			write.write(category);
+			write.write(",");
+			write.write(toolName);
+			write.write(",");
+			write.write(condition);
+			write.write(",");
+			write.write(price);
+			write.write(",");
+			write.write(image);
+			write.write(",");
+			write.write(description);
+			write.write(",");
+			write.write(avail);
+			write.flush();
+			write.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	/**
 	 * method looks for items that match given category
@@ -258,8 +340,10 @@ public class itemArray {
 	
 		
 	private static final String CSV_FILE_PATH = "src/resource/toollist2.csv";
+	private static final String CSV_FILE_PATH_RENT = "src/resource/rentitems.csv";
 	public List<items> itemList = new ArrayList<items>();
 	public List<items> searchList = new ArrayList<items>();
+	public List<items> rentList = new ArrayList<items>();
 	private items item = new items();
 
 

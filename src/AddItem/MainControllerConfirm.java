@@ -15,13 +15,13 @@ public class MainControllerConfirm {
 	
 	public void confirmAdd(ActionEvent event) throws Exception {
 		MainControllerAddItem.AddNew();
-		MainAddItem.closeIt();
-		Confirm.closeIt();
+		AddItemView.closeIt();
+		ConfirmView.closeIt();
 		
 	}
 	
 	public void declineAdd(ActionEvent event) throws Exception {
-		Confirm.closeIt();
+		ConfirmView.closeIt();
 	}
 	
 }

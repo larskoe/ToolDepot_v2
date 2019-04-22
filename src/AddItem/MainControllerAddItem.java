@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import DisplayTool.DisplayItem;
+import DisplayTool.DisplayItemView;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,7 +25,7 @@ import javafx.stage.Stage;
 
 import itemDatabase.itemArray;
 import itemDatabase.items;
-import AddItem.MainAddItem;
+import AddItem.AddItemView;
 
 /**@author tyler
  * The Class MainControllerAddItem.
@@ -109,7 +109,7 @@ public class MainControllerAddItem implements Initializable{
 		
 		
 		Stage primaryStage = new Stage();
-    	Confirm Select = new Confirm();
+    	ConfirmView Select = new ConfirmView();
     	Select.start(primaryStage);
 		
 		//MainAddItem.closeIt();

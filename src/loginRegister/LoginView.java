@@ -31,6 +31,7 @@ import javafx.stage.Stage;
                 });
             
             } catch(Exception e) {
+            	//System.out.println("in login view");
                 e.printStackTrace();
             } 
         }

@@ -22,18 +22,16 @@ import javafx.stage.Stage;
 
 import itemDatabase.itemArray;
 import itemDatabase.items;
-import DisplayTool.DisplayItem;
+import DisplayTool.DisplayItemView;
 
-<<<<<<< HEAD
-=======
 
 /**
  * @author tyler
  * class that implements searching for items in database 
  */
 
->>>>>>> 4cd4ec0a05cb96d5a5cdef5792810790f39589d4
-public class MainController implements Initializable {
+
+public class MainControllerSearch implements Initializable {
 	
 	@FXML
 	public Button search;
@@ -155,7 +153,7 @@ public class MainController implements Initializable {
 			name = listview.getSelectionModel().getSelectedItems();
 			//System.out.println(name);
 			Stage primaryStage = new Stage();
-	    	DisplayItem Item = new DisplayItem();
+	    	DisplayItemView Item = new DisplayItemView();
 	    	Item.start(primaryStage);
 			
 		} catch (Exception e) {

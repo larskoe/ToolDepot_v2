@@ -24,11 +24,6 @@ public class ProductView extends Application {
             primaryStage.setTitle("Products-ToolDepot"); 
             primaryStage.setScene(scene);
             primaryStage.show();
-            
-            primaryStage.focusedProperty().addListener((ov, onHidden, onShown) -> {
-                if(!primaryStage.isFocused())
-                    Platform.runLater(() -> primaryStage.close());
-            });
         
         } catch(Exception e) {
             e.printStackTrace();

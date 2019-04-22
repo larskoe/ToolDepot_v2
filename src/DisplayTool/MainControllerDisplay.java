@@ -19,7 +19,7 @@ import javafx.scene.text.TextFlow;
 
 import itemDatabase.itemArray;
 import itemDatabase.items;
-import Search.MainController;
+import Search.MainControllerSearch;
 
 public class MainControllerDisplay implements Initializable{
 	
@@ -45,7 +45,7 @@ public class MainControllerDisplay implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
 			temp.initilizeArray();
-			choiceNum = MainController.name.get(0).substring(0, 3);
+			choiceNum = MainControllerSearch.name.get(0).substring(0, 3);
 			choice = temp.searchItemNum(choiceNum);
 			choiceName = "Tool Name: " + choice.getToolName();
 			choiceOwner = "Current Owner: " + choice.getOwner();

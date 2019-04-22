@@ -1,4 +1,4 @@
-package DisplayTool;
+package Search;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,13 +7,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
-public class DisplayItem extends Application {
+public class SearchView extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Item.fxml"));
-			Scene scene = new Scene(root,450,350);
+			Parent root = FXMLLoader.load(getClass().getResource("SearchTool.fxml"));
+			Scene scene = new Scene(root,600,600);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("Search");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
@@ -25,4 +26,3 @@ public class DisplayItem extends Application {
 		launch(args);
 	}
 }
-
