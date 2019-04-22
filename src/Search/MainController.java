@@ -24,10 +24,6 @@ import javafx.stage.Stage;
 import itemDatabase.itemArray;
 import itemDatabase.items;
 
-
-
-
-
 public class MainController implements Initializable {
 	
 	@FXML
