@@ -11,12 +11,23 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import userDatabase.UserArray;
 
+/**
+ * @author larskoester
+ * Class that is the main controller for the Profile which implements Initializable 
+ *
+ */
 public class MainControllerProfile implements Initializable {
 
-	
+	/**
+	 * initializes profile screen on startup as mainController implements Initializable
+	 * @param location is the location of file
+	 * @param ResourceBundle is where the resources are
+	 */
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
 			temp.initilizeArray();
+			temp.initilizeArraySession();
+			
 			Name.setText(temp.sessionList.get(0).getFullName());
 			User.setText(temp.sessionList.get(0).getUserName());
 			Email.setText(temp.sessionList.get(0).getEmail());
@@ -25,14 +36,15 @@ public class MainControllerProfile implements Initializable {
 			Image image = new Image(file.toURI().toString());
 		    Image.setImage(image);
 		    
-		    System.out.println(temp.sessionList.get(0).getFullName());
-		    
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
 	}
 
+	/**
+	 * variables and FXML variables needed
+	 */
 	private UserArray temp = new UserArray();
 	@FXML
 	private Label Name;

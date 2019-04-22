@@ -158,14 +158,12 @@ public class MainControllerSearch implements Initializable {
 			
 		} catch (Exception e) {
 			
-			e.printStackTrace();
-			
+			e.printStackTrace();	
 		}
-
 	}
 	
 
 	private itemArray temp = new itemArray();
 	
-	}
+}
 	
