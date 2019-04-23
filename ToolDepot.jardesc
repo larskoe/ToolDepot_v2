@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="/Users/larskoester/Desktop/Untitled.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/ToolDepot_v2/ToolDepot.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=ToolDepot_v2/src&lt;loginRegister{WelcomeView.java[WelcomeView" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <file path="/ToolDepot_v2/.DS_Store"/>
+        <file path="/ToolDepot_v2/build.fxbuild"/>
+        <folder path="/ToolDepot_v2/resource"/>
+        <javaElement handleIdentifier="=ToolDepot_v2/src"/>
+        <file path="/ToolDepot_v2/.classpath"/>
+        <file path="/ToolDepot_v2/README.md"/>
+        <file path="/ToolDepot_v2/.project"/>
+    </selectedElements>
+</jardesc>

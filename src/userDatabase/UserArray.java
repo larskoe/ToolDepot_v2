@@ -22,7 +22,7 @@ public class UserArray {
 	 * method that reads from the CSV file and initializes an array list for later use. uses CVSParser
 	 * @throws IOException throws an IO exception if an error occurs
 	 */
-	public void initilizeArray () throws IOException {
+	public void initilizeArray () {
         try (Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH1));
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT))
         {
@@ -46,7 +46,9 @@ public class UserArray {
 			    newUser.setImagePath(ImagePath);
 			    userList.add(newUser);           
 	            }
-	        }
+	        }  catch (Exception e) {
+				e.printStackTrace();
+			}
 	    }
 	
 	/**
@@ -221,9 +223,10 @@ public class UserArray {
 		return false;
 	}
 		
-	private static final String CSV_FILE_NAME = "users.csv";
-	//private static final String CSV_FILE_PATH1 = "resource/" + CSV_FILE_NAME;
-	private String CSV_FILE_PATH1 = this.getClass().getClassLoader().getResource(CSV_FILE_NAME).toExternalForm();
+	//private static final String CSV_FILE_NAME = "users.csv";
+	//private static final String CSV_FILE_PATH = "users.csv";
+	private static final String CSV_FILE_PATH1 = "resource/users.csv";
+	//private String CSV_FILE_PATH1 = this.getClass().getClassLoader().getResource(CSV_FILE_NAME).toExternalForm();
 	
 	private static final String CSV_FILE_PATH_SESSION = "resource/currentSession.csv";
 	public List<users> userList = new ArrayList<users>();
