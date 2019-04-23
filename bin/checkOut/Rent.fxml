@@ -22,7 +22,7 @@
             </Label>
             <ImageView fx:id="Image" fitHeight="130.0" fitWidth="122.0" layoutX="14.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../resource/img/not-found.png" />
+                  <Image url="@../../resource/no_image.png" />
                </image>
             </ImageView>
             <HBox layoutX="147.0" layoutY="84.0" prefHeight="22.0" prefWidth="122.0">
@@ -63,7 +63,7 @@
             <Label layoutX="146.0" layoutY="159.0" text="Description:" />
             <Label layoutX="146.0" layoutY="190.0" text="Availibility:" />
             <CheckBox fx:id="AgreeCheck" layoutX="54.0" layoutY="362.0" mnemonicParsing="false" text="I agree to the terms and conditions" />
-            <TextArea editable="false" layoutX="53.0" layoutY="270.0" prefHeight="92.0" prefWidth="360.0" text="I agree to pay the price stated above and that if I, the rentee, damage the tool, I will buy or fixthe tool according to the renter." wrapText="true" />
+            <TextArea editable="false" layoutX="53.0" layoutY="270.0" prefHeight="92.0" prefWidth="360.0" text="I agree to pay the price stated above and that if I, the rentee, damage the tool, I will buy or fix the tool according to the renter." wrapText="true" />
             <Label layoutX="53.0" layoutY="257.0" text="Terms and Conditions">
                <font>
                   <Font size="10.0" />

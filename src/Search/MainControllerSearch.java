@@ -49,7 +49,7 @@ public class MainControllerSearch implements Initializable {
 	public static ObservableList<String> name;
 
 
-	ObservableList<String> categoryList = FXCollections.observableArrayList("tool", "basic tool", "power tool","ladder", "saw", "cement", "wood working", "motorized", "painting");
+	ObservableList<String> categoryList = FXCollections.observableArrayList("Tool", "Basic Tool", "Power Tool","Ladder", "Saw", "Cement", "Wood Working", "Motorized", "Painting");
 	
 	/* (non-Javadoc)
 	 * @see javafx.fxml.Initializable#initialize(java.net.URL, java.util.ResourceBundle)

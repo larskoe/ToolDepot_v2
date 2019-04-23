@@ -81,7 +81,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent1" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View1" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -106,7 +106,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent2" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View2" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -131,7 +131,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent3" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View3" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -156,7 +156,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent4" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="VIew4" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -181,7 +181,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent5" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View5" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -206,7 +206,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent6" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View6" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -231,7 +231,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent7" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View7" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -256,7 +256,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent8" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View8" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -281,7 +281,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent9" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View9" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="400.0">
@@ -306,7 +306,7 @@
                                  </children>
                               </HBox>
                               <Button fx:id="Rent10" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="Rent" />
-                              <Button layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#rent" prefHeight="32.0" prefWidth="62.0" text="View" />
+                              <Button fx:id="View10" layoutX="220.0" layoutY="350.0" mnemonicParsing="false" onAction="#view" prefHeight="32.0" prefWidth="62.0" text="View" />
                            </children>
                         </Pane>
                      </children>

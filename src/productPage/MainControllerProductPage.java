@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import AddItem.AddItemView;
-import DisplayTool.DisplayItemView;
 import Search.SearchView;
 import checkOut.RentItemView;
 import itemDatabase.itemArray;
@@ -77,6 +76,69 @@ public class MainControllerProductPage implements Initializable {
 	
 	public void view (ActionEvent event) {
 		try {
+			String name;
+			String price;
+			Button btn = (Button) event.getSource();
+			String id = btn.getId();
+			temp.viewList.clear();
+			
+			temp.PrintItems(temp.viewList);
+			
+			if (id.equals("View1")) {
+				name = Name1.getText();
+				price = Price1.getText();
+			} else if (id.equals("View2")) {
+				name = Name2.getText();
+				price = Price2.getText();
+			} else if (id.equals("View3")) {
+				name = Name3.getText();
+				price = Price3.getText();
+			} else if (id.equals("View4")) {
+				name = Name4.getText();
+				price = Price4.getText();
+			} else if (id.equals("View5")) {
+				name = Name5.getText();
+				price = Price5.getText();
+			} else if (id.equals("View6")) {
+				name = Name6.getText();
+				price = Price6.getText();
+			} else if (id.equals("View7")) {
+				name = Name7.getText();
+				price = Price7.getText();
+			} else if (id.equals("View8")) {
+				name = Name8.getText();
+				price = Price8.getText();
+			} else if (id.equals("View9")) {
+				name = Name8.getText();
+				price = Price8.getText();
+			} else {
+				name = Name10.getText();
+				price = Price10.getText();
+			}
+			
+			
+			items rentItem = new items();
+			rentItem.setToolName(name);
+			rentItem.setPrice(price);
+			temp.viewList.add(rentItem);
+			
+			temp.PrintItems(temp.viewList);
+			
+			for (int i = 0; i < temp.itemList.size(); i++)
+			{
+				if(temp.itemList.get(i).getToolName().equals(temp.viewList.get(0).getToolName()) && temp.itemList.get(i).getPrice().equals(temp.viewList.get(0).getPrice()))
+				{
+					temp.AppendCSVRent(temp.itemList.get(i).getItemNum(), temp.itemList.get(i).getOwner(), 
+							temp.itemList.get(i).getCategory(), name, temp.itemList.get(i).getCondition(), 
+							price, temp.itemList.get(i).getImage(), temp.itemList.get(i).getDescription(), temp.itemList.get(i).getAvail());
+				}
+			}
+			temp.PrintItems(temp.viewList);
+			
+			Stage primaryStage = new Stage();
+	    	RentItemView rent = new RentItemView();
+	    	rent.start(primaryStage);
+			
 			
 			
 		} catch (Exception e) {
@@ -132,9 +194,6 @@ public class MainControllerProductPage implements Initializable {
 			} else if (id.equals("Rent7")) {
 				name = Name7.getText();
 				price = Price7.getText();
-			} else if (id.equals("Rent8")) {
-				name = Name8.getText();
-				price = Price8.getText();
 			} else if (id.equals("Rent8")) {
 				name = Name8.getText();
 				price = Price8.getText();

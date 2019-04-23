@@ -344,6 +344,7 @@ public class itemArray {
 	public List<items> itemList = new ArrayList<items>();
 	public List<items> searchList = new ArrayList<items>();
 	public List<items> rentList = new ArrayList<items>();
+	public List<items> viewList = new ArrayList<items>();
 	private items item = new items();
 
 

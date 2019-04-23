@@ -1,5 +1,3 @@
-Lars Koester,lkoester2015@fau.edu,lars,123,Boca Raton,src/resource/img/lars.png
-sam,sam@sam.com,sam,124,Coral Springs,src/resource/img/lars.png
-Tyler Smith,tsmith2017@fau.edu,tyler,123,Fort Lauderdale,src/resource/img/lars.png
-lars,lars@gmail.com,larskoe,123,Parkland,src/resource/img/lars.png
-test,test@test.com,test,126,TestCity,src/img/no_image.png
+Lars Koester,lkoester2015@fau.edu,lars,123,Boca Raton,resource/lars.png
+sam,sam@sam.com,sam,124,Coral Springs,resource/sam.png
+Tyler Smith,tsmith2017@fau.edu,tyler,123,Fort Lauderdale,resource/tyler.png

@@ -23,9 +23,10 @@ public class UserArray {
 	 * @throws IOException throws an IO exception if an error occurs
 	 */
 	public void initilizeArray () {
-        try (Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH1));
-             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT))
+        try 
         {
+        	Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH1));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT); 
         	userList.clear();
 			for (CSVRecord csvRecord : csvParser) {
 			          
