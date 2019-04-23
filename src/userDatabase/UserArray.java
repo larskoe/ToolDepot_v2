@@ -23,7 +23,7 @@ public class UserArray {
 	 * @throws IOException throws an IO exception if an error occurs
 	 */
 	public void initilizeArray () throws IOException {
-        try (Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH));
+        try (Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH1));
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT))
         {
         	userList.clear();
@@ -145,7 +145,7 @@ public class UserArray {
 		
 		FileWriter write;
 		try {
-			write = new FileWriter(CSV_FILE_PATH,true);
+			write = new FileWriter(CSV_FILE_PATH1,true);
 			
 			//System.out.println("inside AppendCVS" + fullName);
 			write.append("\n");
@@ -221,8 +221,11 @@ public class UserArray {
 		return false;
 	}
 		
-	private static final String CSV_FILE_PATH = "src/resource/users.csv";
-	private static final String CSV_FILE_PATH_SESSION = "src/resource/currentSession.csv";
+	private static final String CSV_FILE_NAME = "users.csv";
+	//private static final String CSV_FILE_PATH1 = "resource/" + CSV_FILE_NAME;
+	private String CSV_FILE_PATH1 = this.getClass().getClassLoader().getResource(CSV_FILE_NAME).toExternalForm();
+	
+	private static final String CSV_FILE_PATH_SESSION = "resource/currentSession.csv";
 	public List<users> userList = new ArrayList<users>();
 	public List<users> sessionList = new ArrayList<users>();
 

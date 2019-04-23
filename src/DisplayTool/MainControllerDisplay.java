@@ -4,22 +4,19 @@ package DisplayTool;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.TextFlow;
-
+import javafx.stage.Stage;
 import itemDatabase.itemArray;
 import itemDatabase.items;
 import Search.MainControllerSearch;
+import checkOut.RentItemView;
 
 public class MainControllerDisplay implements Initializable{
 	
@@ -47,13 +44,13 @@ public class MainControllerDisplay implements Initializable{
 			temp.initilizeArray();
 			choiceNum = MainControllerSearch.name.get(0).substring(0, 3);
 			choice = temp.searchItemNum(choiceNum);
-			choiceName = "Tool Name: " + choice.getToolName();
-			choiceOwner = "Current Owner: " + choice.getOwner();
-			choicePrice = "Price Per Day: $" + choice.getPrice();
+			choiceName = choice.getToolName();
+			choiceOwner = choice.getOwner();
+			choicePrice = choice.getPrice();
 			choiceImage = choice.getImage(); 
-			choiceCondition = "Current Condition: " + choice.getCondition();
-			choiceDescription = "Product Description: \n" + choice.getDescription();
-			choiceAvail = "Availability Status: \n" + choice.getAvail();
+			choiceCondition = choice.getCondition();
+			choiceDescription = choice.getDescription();
+			choiceAvail = choice.getAvail();
 			
 			choiceImageError = "src/img/no_image.png";
 			
@@ -78,14 +75,43 @@ public class MainControllerDisplay implements Initializable{
 		
 	}
 	
+	/**
+	 * method that opens the rent view and shows the applicable information
+	 * @param event event handler for the button
+	 */
 	public void rent(ActionEvent event) throws Exception {
-		System.out.println("you want to rent this");
+		try {
+			temp.rentList.clear();
+			
+			String name = toolName.getText();
+			String price1 = price.getText();
+			
+			items rentItem = new items();
+			rentItem.setToolName(name);
+			rentItem.setPrice(price1);
+			temp.rentList.add(rentItem);
+			
+			
+			for (int i = 0; i < temp.itemList.size(); i++)
+			{
+				if(temp.itemList.get(i).getToolName().equals(temp.rentList.get(0).getToolName()))
+				{
+					temp.AppendCSVRent(temp.itemList.get(i).getItemNum(), temp.itemList.get(i).getOwner(), 
+							temp.itemList.get(i).getCategory(), name, temp.itemList.get(i).getCondition(), 
+							price1, temp.itemList.get(i).getImage(), temp.itemList.get(i).getDescription(), 
+							temp.itemList.get(i).getAvail());
+				}
+			}
+			
+			Stage primaryStage = new Stage();
+	    	RentItemView rent = new RentItemView();
+	    	rent.start(primaryStage);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
-	public void print () {
-		System.out.println(choiceImage);
-		//temp.PrintItems(temp.itemList);
-	}
 
 	private itemArray temp = new itemArray();
 	private String choiceNum;
@@ -97,6 +123,5 @@ public class MainControllerDisplay implements Initializable{
 	private String choiceCondition;
 	private String choiceDescription;
 	private String choiceAvail;
-	//public List<items> choice = new ArrayList<items>();
 	public items choice = new items();
 }

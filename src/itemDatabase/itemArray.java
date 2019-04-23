@@ -339,8 +339,8 @@ public class itemArray {
 
 	
 		
-	private static final String CSV_FILE_PATH = "src/resource/toollist2.csv";
-	private static final String CSV_FILE_PATH_RENT = "src/resource/rentitems.csv";
+	private static final String CSV_FILE_PATH = "resource/toollist.csv";
+	private static final String CSV_FILE_PATH_RENT = "resource/rentItems.csv";
 	public List<items> itemList = new ArrayList<items>();
 	public List<items> searchList = new ArrayList<items>();
 	public List<items> rentList = new ArrayList<items>();

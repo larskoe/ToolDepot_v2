@@ -77,15 +77,17 @@ public class MainControllerProductPage implements Initializable {
 	
 	public void view (ActionEvent event) {
 		try {
-			Stage primaryStage = new Stage();
-            DisplayItemView display = new DisplayItemView();
-            display.start(primaryStage);
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
+	/**
+	 * method that loads the add an item view
+	 * @param event event handler
+	 */
 	public void add (ActionEvent event) {
 		try {
 			Stage primaryStage = new Stage();
@@ -171,6 +173,10 @@ public class MainControllerProductPage implements Initializable {
 		}
 	}
 	
+	/**
+	 * method that loads the profile view
+	 * @param event event handler
+	 */
 	public void profile (ActionEvent event) {
 		
 		Stage primaryStage = new Stage();

@@ -75,7 +75,7 @@ public class MainControllerCheckOut implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
 			temp.initilizeArrayRent();
-			temp.PrintItems(temp.rentList);
+			//temp.PrintItems(temp.rentList);
 			Name.setStyle("-fx-stroke-width: 3");
 			Name.setText(temp.rentList.get(0).getToolName());
 			Price.setText(temp.rentList.get(0).getPrice());
@@ -85,13 +85,13 @@ public class MainControllerCheckOut implements Initializable{
 			Avail.setText(temp.rentList.get(0).getAvail());
 			
 			
-			if (temp.rentList.get(0).getCondition().equals("excellent")) {
+			if (temp.rentList.get(0).getCondition().equals("Excellent")) {
 				Condition.setStyle("-fx-text-fill: green");
-			} else if (temp.rentList.get(0).getCondition().equals("good")) {
+			} else if (temp.rentList.get(0).getCondition().equals("Good")) {
 				Condition.setStyle("-fx-text-fill: blue");
-			} else if (temp.rentList.get(0).getCondition().equals("fair")) {
+			} else if (temp.rentList.get(0).getCondition().equals("Fair")) {
 				Condition.setStyle("-fx-text-fill: orange");
-			} else if (temp.rentList.get(0).getCondition().equals("poor")) {
+			} else if (temp.rentList.get(0).getCondition().equals("Poor")) {
 				Condition.setStyle("-fx-text-fill: red");
 			}
 			

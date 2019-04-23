@@ -8,38 +8,52 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayTool.MainControllerDisplay">
+<AnchorPane prefHeight="450.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DisplayTool.MainControllerDisplay">
    <children>
-      <Pane prefHeight="350.0" prefWidth="450.0">
+      <Pane prefHeight="450.0" prefWidth="450.0">
          <children>
-            <ImageView fx:id="Pic" fitHeight="200.0" fitWidth="200.0" layoutX="14.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Pic" fitHeight="180.0" fitWidth="180.0" layoutX="14.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../resource/img/not-found.png" />
                </image>
             </ImageView>
-            <HBox layoutX="225.0" layoutY="37.0" prefHeight="22.0" prefWidth="223.0">
+            <HBox layoutX="202.0" layoutY="37.0" prefHeight="22.0" prefWidth="223.0">
                <children>
-                  <Label fx:id="toolName" contentDisplay="BOTTOM" prefHeight="24.0" prefWidth="221.0" text="Name" />
+                  <Label prefHeight="22.0" prefWidth="82.0" text="Tool Name:  " />
+                  <Label fx:id="toolName" contentDisplay="BOTTOM" prefHeight="22.0" prefWidth="43.0" text="Name" />
                </children>
             </HBox>
-            <HBox layoutX="225.0" layoutY="103.0" prefHeight="22.0" prefWidth="221.0">
+            <HBox layoutX="202.0" layoutY="55.0" prefHeight="22.0" prefWidth="223.0">
                <children>
-                  <Label fx:id="owner" contentDisplay="BOTTOM" prefHeight="22.0" prefWidth="224.0" text="owner" />
+                  <Label prefHeight="23.0" prefWidth="43.0" text="Price:  " />
+                  <Label fx:id="price" prefHeight="22.0" prefWidth="168.0" text="price" />
                </children>
             </HBox>
-            <HBox layoutX="224.0" layoutY="59.0" prefHeight="22.0" prefWidth="223.0">
+            <HBox layoutX="202.0" layoutY="77.0" prefHeight="22.0" prefWidth="223.0">
                <children>
-                  <Label fx:id="price" prefHeight="17.0" prefWidth="217.0" text="price" />
+                  <Label prefHeight="22.0" prefWidth="139.0" text="Condition:  " />
+                  <Label fx:id="condition" contentDisplay="BOTTOM" prefHeight="22.0" prefWidth="220.0" text="Condition" />
                </children>
             </HBox>
-            <HBox layoutX="224.0" layoutY="81.0" prefHeight="22.0" prefWidth="223.0">
+            <HBox layoutX="203.0" layoutY="99.0" prefHeight="22.0" prefWidth="221.0">
                <children>
-                  <Label fx:id="condition" contentDisplay="BOTTOM" prefHeight="24.0" prefWidth="221.0" text="Condition" />
+                  <Label prefHeight="23.0" prefWidth="52.0" text="Owner:  " />
+                  <Label fx:id="owner" contentDisplay="BOTTOM" prefHeight="22.0" prefWidth="160.0" text="owner" />
                </children>
             </HBox>
-            <Label fx:id="description" layoutX="225.0" layoutY="125.0" prefHeight="74.0" prefWidth="182.0" text="discription" />
-            <Button fx:id="rent" layoutX="193.0" layoutY="294.0" mnemonicParsing="false" onAction="#rent" text="Rent" />
-            <Label fx:id="avail" layoutX="225.0" layoutY="220.0" prefHeight="37.0" prefWidth="223.0" text="availability" />
+            <Label layoutX="204.0" layoutY="121.0" prefHeight="100.0" prefWidth="82.0" text="Description:  " />
+            <HBox layoutX="287.0" layoutY="121.0" prefHeight="100.0" prefWidth="126.0">
+               <children>
+                  <Label fx:id="description" prefHeight="100.0" prefWidth="200.0" text="discription" />
+               </children>
+            </HBox>
+            <HBox layoutX="213.0" layoutY="221.0" prefHeight="27.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="78.0" text="Availability:  " />
+                  <Label fx:id="avail" prefHeight="27.0" prefWidth="123.0" text="availability" />
+               </children>
+            </HBox>
+            <Button fx:id="rent" layoutX="181.0" layoutY="290.0" mnemonicParsing="false" onAction="#rent" text="Rent" />
          </children>
       </Pane>
    </children>
