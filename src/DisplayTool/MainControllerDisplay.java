@@ -54,12 +54,28 @@ public class MainControllerDisplay implements Initializable{
 			
 			choiceImageError = "src/img/no_image.png";
 			
-			price.setText(choicePrice);
+			price.setText("$" + choicePrice);
 			toolName.setText(choiceName);
 			owner.setText(choiceOwner);
 			description.setText(choiceDescription);
 			condition.setText(choiceCondition);
 			avail.setText(choiceAvail);
+			
+			if (choiceCondition.equals("Excellent")) {
+				condition.setStyle("-fx-text-fill: green");
+			} else if (choiceCondition.equals("Good")) {
+				condition.setStyle("-fx-text-fill: blue");
+			} else if (choiceCondition.equals("Fair")) {
+				condition.setStyle("-fx-text-fill: orange");
+			} else if (choiceCondition.equals("Poor")) {
+				condition.setStyle("-fx-text-fill: red");
+			}
+			
+			if (choiceAvail.contains("Not")) {
+				avail.setStyle("-fx-text-fill: red");
+			} else {
+				avail.setStyle("-fx-text-fill: green"); 
+			}
 			
 			File file = new File(choiceImage.toString());
 			pic = new Image(file.toURI().toString());
