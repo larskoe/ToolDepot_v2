@@ -9,6 +9,7 @@ import Search.SearchView;
 import checkOut.RentItemView;
 import itemDatabase.itemArray;
 import itemDatabase.items;
+import itemView.ItemView;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -80,9 +81,9 @@ public class MainControllerProductPage implements Initializable {
 			String price;
 			Button btn = (Button) event.getSource();
 			String id = btn.getId();
-			temp.viewList.clear();
+			temp.rentList.clear();
 			
-			temp.PrintItems(temp.viewList);
+			
 			
 			if (id.equals("View1")) {
 				name = Name1.getText();
@@ -120,24 +121,22 @@ public class MainControllerProductPage implements Initializable {
 			items rentItem = new items();
 			rentItem.setToolName(name);
 			rentItem.setPrice(price);
-			temp.viewList.add(rentItem);
+			temp.rentList.add(rentItem);
 			
-			temp.PrintItems(temp.viewList);
 			
 			for (int i = 0; i < temp.itemList.size(); i++)
 			{
-				if(temp.itemList.get(i).getToolName().equals(temp.viewList.get(0).getToolName()) && temp.itemList.get(i).getPrice().equals(temp.viewList.get(0).getPrice()))
+				if(temp.itemList.get(i).getToolName().equals(temp.rentList.get(0).getToolName()))
 				{
 					temp.AppendCSVRent(temp.itemList.get(i).getItemNum(), temp.itemList.get(i).getOwner(), 
 							temp.itemList.get(i).getCategory(), name, temp.itemList.get(i).getCondition(), 
 							price, temp.itemList.get(i).getImage(), temp.itemList.get(i).getDescription(), temp.itemList.get(i).getAvail());
 				}
 			}
-			temp.PrintItems(temp.viewList);
 			
 			Stage primaryStage = new Stage();
-	    	RentItemView rent = new RentItemView();
-	    	rent.start(primaryStage);
+	    	ItemView view = new ItemView();
+	    	view.start(primaryStage);
 			
 			
 			

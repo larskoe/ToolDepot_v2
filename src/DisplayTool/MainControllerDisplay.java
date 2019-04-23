@@ -52,7 +52,7 @@ public class MainControllerDisplay implements Initializable{
 			choiceDescription = choice.getDescription();
 			choiceAvail = choice.getAvail();
 			
-			choiceImageError = "src/img/no_image.png";
+			choiceImageError = "resource/no_image.png";
 			
 			price.setText("$" + choicePrice);
 			toolName.setText(choiceName);
@@ -118,6 +118,8 @@ public class MainControllerDisplay implements Initializable{
 							temp.itemList.get(i).getAvail());
 				}
 			}
+			
+			
 			
 			Stage primaryStage = new Stage();
 	    	RentItemView rent = new RentItemView();

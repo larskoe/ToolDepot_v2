@@ -11,7 +11,7 @@ public class ItemView extends Application {
 	@Override
     public void start(Stage primaryStage) {
     	try {
-            Parent root = FXMLLoader.load(getClass().getResource("/itemView/Item.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Item.fxml"));
             Scene scene = new Scene(root);
             
             //scene.getStylesheets().add(getClass().getResource("product.css").toExternalForm());
