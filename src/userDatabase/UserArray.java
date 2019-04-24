@@ -1,9 +1,11 @@
 package userDatabase;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,12 @@ public class UserArray {
 	public void initilizeArray () {
         try 
         {
+        	
+        	//File f = new File(CSV_FILE_PATH1);
+        	//System.out.println(f + " " + f.exists());
+        	
+        	//System.out.println(f.getCanonicalPath());
+     
         	Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH1));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT); 
         	userList.clear();
@@ -227,6 +235,7 @@ public class UserArray {
 	//private static final String CSV_FILE_NAME = "users.csv";
 	//private static final String CSV_FILE_PATH = "users.csv";
 	private static final String CSV_FILE_PATH1 = "resource/users.csv";
+	private String test = "resource/101.png";
 	//private String CSV_FILE_PATH1 = this.getClass().getClassLoader().getResource(CSV_FILE_NAME).toExternalForm();
 	
 	private static final String CSV_FILE_PATH_SESSION = "resource/currentSession.csv";

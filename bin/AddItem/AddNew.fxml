@@ -6,22 +6,28 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddItem.MainControllerAddItem">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddItem.MainControllerAddItem">
    <children>
-      <TextField fx:id="toolName" layoutX="149.0" layoutY="65.0" prefHeight="25.0" prefWidth="248.0" promptText="Name of tool" />
-      <Label layoutX="31.0" layoutY="28.0" prefHeight="17.0" prefWidth="113.0" text="Tool Category" />
-      <ComboBox fx:id="category" layoutX="149.0" layoutY="24.0" prefHeight="25.0" prefWidth="248.0" promptText="Category" />
-      <Label layoutX="31.0" layoutY="69.0" prefHeight="17.0" prefWidth="81.0" text="Tool Name" />
-      <Label layoutX="31.0" layoutY="112.0" prefHeight="17.0" prefWidth="81.0" text="Description" />
-      <Label layoutX="31.0" layoutY="296.0" text="Owner" />
-      <TextField fx:id="owner" layoutX="149.0" layoutY="292.0" prefHeight="25.0" prefWidth="248.0" promptText="Username" />
-      <TextArea fx:id="description" layoutX="149.0" layoutY="100.0" prefHeight="100.0" prefWidth="248.0" promptText="Description here" />
-      <Button fx:id="post" layoutX="191.0" layoutY="360.0" mnemonicParsing="false" onAction="#add" text="Post Item" />
-      <Label layoutX="31.0" layoutY="218.0" text="Current Condition" />
-      <ComboBox fx:id="condition" layoutX="149.0" layoutY="214.0" prefHeight="25.0" prefWidth="248.0" promptText="Condition" />
-      <Label layoutX="31.0" layoutY="265.0" text="Rental Price Per Day" />
-      <TextField fx:id="price" layoutX="150.0" layoutY="261.0" prefHeight="25.0" prefWidth="248.0" promptText="USD" />
+      <TextField fx:id="toolName" layoutX="150.0" layoutY="134.0" prefHeight="25.0" prefWidth="248.0" promptText="Name of tool" />
+      <Label layoutX="32.0" layoutY="97.0" prefHeight="17.0" prefWidth="113.0" text="Tool Category" />
+      <ComboBox fx:id="category" layoutX="150.0" layoutY="93.0" prefHeight="25.0" prefWidth="248.0" promptText="Category" />
+      <Label layoutX="32.0" layoutY="138.0" prefHeight="17.0" prefWidth="81.0" text="Tool Name" />
+      <Label layoutX="32.0" layoutY="181.0" prefHeight="17.0" prefWidth="81.0" text="Description" />
+      <Label layoutX="32.0" layoutY="365.0" text="Owner" />
+      <TextField fx:id="owner" editable="false" layoutX="150.0" layoutY="361.0" prefHeight="25.0" prefWidth="248.0" promptText="Username" />
+      <TextArea fx:id="description" layoutX="150.0" layoutY="169.0" prefHeight="100.0" prefWidth="248.0" promptText="Description here" />
+      <Button fx:id="post" layoutX="212.0" layoutY="429.0" mnemonicParsing="false" onAction="#add" text="Post Item" />
+      <Label layoutX="32.0" layoutY="287.0" text="Current Condition" />
+      <ComboBox fx:id="condition" layoutX="150.0" layoutY="283.0" prefHeight="25.0" prefWidth="248.0" promptText="Condition" />
+      <Label layoutX="32.0" layoutY="334.0" text="Rental Price" />
+      <TextField fx:id="price" layoutX="151.0" layoutY="330.0" prefHeight="25.0" prefWidth="248.0" promptText="USD" />
       <Label fx:id="status" layoutX="133.0" layoutY="329.0" prefHeight="17.0" prefWidth="183.0" />
+      <Label layoutX="161.0" layoutY="37.0" text="Add a New Item">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

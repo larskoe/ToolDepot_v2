@@ -16,7 +16,7 @@ public class AddItemView extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("AddNew.fxml"));
-			Scene scene = new Scene(root,450,450);
+			Scene scene = new Scene(root);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("Add New Item");
 			primaryStage.setScene(scene);

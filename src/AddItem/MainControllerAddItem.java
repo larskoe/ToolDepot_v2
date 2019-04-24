@@ -22,7 +22,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+import userDatabase.UserArray;
 import itemDatabase.itemArray;
 import itemDatabase.items;
 import AddItem.AddItemView;
@@ -62,9 +62,12 @@ public class MainControllerAddItem implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try {
 			temp.initilizeArray();
+			user.initilizeArraySession();
 			
 			category.setItems(categoryList);
 			condition.setItems(conditionList);
+			
+			owner.setText(user.sessionList.get(0).getUserName());
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -131,6 +134,7 @@ public class MainControllerAddItem implements Initializable{
 	 * this is where the information from the itemdatabase is stored
 	 **/
 	private static itemArray temp = new itemArray();
+	private static UserArray user = new UserArray();
 	public static items addThisItem = new items();
 	
 	

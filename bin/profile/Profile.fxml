@@ -9,12 +9,12 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="profile.MainControllerProfile">
    <children>
-      <ImageView fx:id="Image" fitHeight="150.0" fitWidth="150.0" layoutX="24.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Image" fitHeight="150.0" fitWidth="150.0" layoutX="23.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/no_image.png" />
          </image>
       </ImageView>
-      <HBox layoutX="188.0" layoutY="71.0" prefHeight="17.0" prefWidth="295.0">
+      <HBox layoutX="188.0" layoutY="129.0" prefHeight="17.0" prefWidth="295.0">
          <children>
             <Label text="Full Name:  ">
                <font>
@@ -24,7 +24,7 @@
             <Label fx:id="Name" prefHeight="17.0" prefWidth="218.0" text="name" />
          </children>
       </HBox>
-      <HBox layoutX="188.0" layoutY="96.0" prefHeight="17.0" prefWidth="295.0">
+      <HBox layoutX="188.0" layoutY="155.0" prefHeight="17.0" prefWidth="295.0">
          <children>
             <Label text="Username:  ">
                <font>
@@ -34,7 +34,7 @@
             <Label fx:id="User" prefHeight="17.0" prefWidth="216.0" text="user" />
          </children>
       </HBox>
-      <HBox layoutX="188.0" layoutY="120.0" prefHeight="17.0" prefWidth="295.0">
+      <HBox layoutX="188.0" layoutY="179.0" prefHeight="17.0" prefWidth="295.0">
          <children>
             <Label text="Email:  ">
                <font>
@@ -48,7 +48,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox layoutX="188.0" layoutY="146.0" prefHeight="17.0" prefWidth="295.0">
+      <HBox layoutX="188.0" layoutY="204.0" prefHeight="17.0" prefWidth="295.0">
          <children>
             <Label text="City:  ">
                <font>
@@ -62,5 +62,10 @@
             </Label>
          </children>
       </HBox>
+      <Label layoutX="182.0" layoutY="44.0" text="Your Profile">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
