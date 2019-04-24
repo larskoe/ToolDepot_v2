@@ -18,6 +18,11 @@ import itemDatabase.items;
 import Search.MainControllerSearch;
 import checkOut.RentItemView;
 
+
+/**
+ * The Class MainControllerDisplay.
+ * @author tylersmith
+ */
 public class MainControllerDisplay implements Initializable{
 	
 	@FXML

@@ -1,5 +1,10 @@
 package itemDatabase;
 
+/**
+ * @author larskoester
+ * @author tylersmith
+ * item class that holds all variables for an item
+ */
 public class items {
 
 		/**

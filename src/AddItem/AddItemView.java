@@ -6,12 +6,15 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-import AddItem.MainControllerAddItem;
-
-
+/**
+ * The Class AddItemView.
+ * @author tylersmith
+ */
 public class AddItemView extends Application {
 	
-
+	/* (non-Javadoc)
+	 * @see javafx.application.Application#start(javafx.stage.Stage)
+	 */
 	//@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -29,13 +32,23 @@ public class AddItemView extends Application {
 		}
 	}
 	
+	/**
+	 * Close it.
+	 * closes window
+	 */
 	public static void closeIt() {
 		primaryStageC.close();
 	}
 	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
 	
+	/** The primary stage C. */
 	private static Stage primaryStageC;
 }

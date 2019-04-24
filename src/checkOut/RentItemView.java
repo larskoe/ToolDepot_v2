@@ -13,6 +13,9 @@ import javafx.stage.Stage;
  */
 public class RentItemView extends Application {
 	
+	/**
+	 * start method for starting the scene that calls fxml file
+	 */
 	public void start(Stage primaryStage) {
     	try {
             Parent root = FXMLLoader.load(getClass().getResource("/checkOut/Rent.fxml"));

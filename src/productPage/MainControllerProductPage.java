@@ -75,6 +75,10 @@ public class MainControllerProductPage implements Initializable {
 		}
 	}
 	
+	/**
+	 * method that loads the item view scene based on the button pressed
+	 * @param event event handler
+	 */
 	public void view (ActionEvent event) {
 		try {
 			String name;
@@ -162,7 +166,7 @@ public class MainControllerProductPage implements Initializable {
 	
 	/**
 	 * method that is called when rent
-	 * @param event
+	 * @param event event handler
 	 */
 	public void rent (ActionEvent event) {
 		try {

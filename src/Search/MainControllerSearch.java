@@ -22,7 +22,7 @@ import DisplayTool.DisplayItemView;
 
 
 /**
- * @author tyler
+ * @author tylersmith
  * class that implements searching for items in database 
  */
 

@@ -1,15 +1,8 @@
 package AddItem;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.ResourceBundle;
-
-import DisplayTool.DisplayItemView;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,16 +11,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import userDatabase.UserArray;
 import itemDatabase.itemArray;
 import itemDatabase.items;
-import AddItem.AddItemView;
 
-/**@author tyler
+/**@author tylersmith
  * The Class MainControllerAddItem.
  */
 public class MainControllerAddItem implements Initializable{

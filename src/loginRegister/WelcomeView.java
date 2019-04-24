@@ -14,7 +14,9 @@ import javafx.stage.Stage;
 public class WelcomeView extends Application {
 	
     
-    @Override
+	/**
+	 * start method for starting the scene that calls fxml file
+	 */
     public void start(Stage primaryStage) {
         try {
                   

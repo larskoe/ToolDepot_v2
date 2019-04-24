@@ -11,9 +11,11 @@ import javafx.stage.Stage;
  * @author larskoester
  * view that loads the login screen for the application
  */
-    public class LoginView extends Application {
+public class LoginView extends Application {
         
-        @Override
+    	/**
+    	 * start method for starting the scene that calls fxml file
+    	 */
         public void start(Stage primaryStage) {
         	try {
                 Parent root = FXMLLoader.load(getClass().getResource("/loginRegister/Login.fxml"));

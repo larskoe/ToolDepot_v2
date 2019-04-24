@@ -15,9 +15,18 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+/**
+ * @author larskoester
+ * method that is the main controller for item view 
+ * shows information about the item
+ */
 public class MainControllerItemView implements Initializable {
 
-	@Override
+	/**
+	 * initializes item view on startup as mainController implements Initializable
+	 * @param location is the location of file
+	 * @param ResourceBundle is where the resources are
+	 */
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
 			temp.initilizeArrayRent();
@@ -89,6 +98,10 @@ public class MainControllerItemView implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	
+    /**
+     * variables and FXML variables needed
+     */
 	private itemArray temp = new itemArray();
 	@FXML
 	Label toolName;

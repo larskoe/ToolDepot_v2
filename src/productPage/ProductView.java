@@ -12,7 +12,9 @@ import javafx.stage.Stage;
  */
 public class ProductView extends Application {
 
-	@Override
+	/**
+	 * start method for starting the scene that calls fxml file
+	 */
     public void start(Stage primaryStage) {
     	try {
             Parent root = FXMLLoader.load(getClass().getResource("/productPage/Product.fxml"));

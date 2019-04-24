@@ -6,6 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * @author larskoester
+ * view that loads the view screen for the application 
+ */
 public class ItemView extends Application {
 
 	@Override

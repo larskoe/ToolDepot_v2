@@ -6,9 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * @author larskoester
+ * view that loads the product screen for the application
+ */
 public class ProfileView extends Application {
     
-    @Override
+	/**
+	 * start method for starting the scene that calls fxml file
+	 */
     public void start(Stage primaryStage) {
     	try {
     		Parent root = FXMLLoader.load(getClass().getResource("/profile/Profile.fxml"));

@@ -7,8 +7,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
+/**
+ * The Class DisplayItemView.
+ * @author tylersmith
+ */
 public class DisplayItemView extends Application {
-	@Override
+	
+	
+	/* (non-Javadoc)
+	 * @see javafx.application.Application#start(javafx.stage.Stage)
+	 */
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("Item.fxml"));
@@ -21,6 +29,11 @@ public class DisplayItemView extends Application {
 		}
 	}
 	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

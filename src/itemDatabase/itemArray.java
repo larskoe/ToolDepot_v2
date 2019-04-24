@@ -15,7 +15,8 @@ import org.apache.commons.csv.CSVRecord;
 import itemDatabase.items;
 
 /**
- * @author tylersmith2356
+ * @author tylersmith
+ * @author larskoester
  * class that implements the item array for searching, adding, removing, etc. 
  */
 

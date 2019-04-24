@@ -7,12 +7,18 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-import AddItem.MainControllerAddItem;
-
-
+/**
+ * The Class ConfirmView.
+ * @author tylersmith
+ * this window shows a confirm menu for the AddItemView
+ */
 public class ConfirmView extends Application {
 
 
+
+/* (non-Javadoc)
+ * @see javafx.application.Application#start(javafx.stage.Stage)
+ */
 //@Override
 public void start(Stage primaryStage) {
 	try {
@@ -30,13 +36,22 @@ public void start(Stage primaryStage) {
 	}
 }
 
+/**
+ * Close it.
+ */
 public static void closeIt() {
 	primaryStageC.close();
 }
 
+/**
+ * The main method.
+ *
+ * @param args the arguments
+ */
 public static void main(String[] args) {
 	launch(args);
 }
 
+/** The primary stage C. */
 private static Stage primaryStageC;
 }
