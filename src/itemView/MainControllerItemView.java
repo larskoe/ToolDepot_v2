@@ -31,6 +31,7 @@ public class MainControllerItemView implements Initializable {
 		try {
 			temp.initilizeArrayRent();
 			toolName.setText(temp.rentList.get(0).getToolName());
+			owner.setText(temp.rentList.get(0).getOwner());
 			price.setText(temp.rentList.get(0).getPrice());
 			condition.setText(temp.rentList.get(0).getCondition());
 			description.setText(temp.rentList.get(0).getDescription());
